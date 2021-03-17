@@ -1,6 +1,8 @@
 ---
 layout: base.njk
-// title: 👋
+pagination:
+    data: collections.notes
+    size: 10
 ---
 
 <section id="intro" class="mb-20 md:mb-32 lg:mb-40">
@@ -9,7 +11,7 @@ layout: base.njk
             class="md:inline-block">multi-disciplinary</span> product designer based in Sydney, Australia.
     </h1>
 
-    <h3>Currently, I’m designing software for the financial industry at Practifi.</h3>
+    <h3>Currently, I’m designing software for the insurance industry at Mitti.</h3>
 
     {% include "nowplaying.njk" %}
 
@@ -18,14 +20,13 @@ layout: base.njk
 <section id="main">
 
     <div class="entry relative mb-20 md:mb-32 lg:mb-40">
-        <div class="mono text-12 text-textSubtle mb-3 lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">June 11, 2020
+        <div class="mono text-12 text-textSubtle mb-3 lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">March 18, 2021
         </div>
         <h1 class="text-24 md:text-28 lg:text-32 text-textContrast mb-5">
-            <a href="#">Approach film leg market movement hit's hard
-                home </a>
+            <a href="#">keming (kêm-'îng); The result of improper kerning</a>
         </h1>
         <figure class="my-5">
-            <img src="https://placeimg.com/1020/600/animals" alt="">
+            <img src="static/about/brody.jpg" alt="">
             <figcaption class="text-12 text-textSubtle text-center mt-2">Chance political interesting I remember.
             </figcaption>
         </figure>
@@ -143,10 +144,12 @@ layout: base.njk
 
                                 <blockquote>
                                     <p>I haven’t installed MSFT Office on a machine since 2009. Sheets and Docs have been good enough for me.
-                The theoretical unlimited computing power and collaboration features meant Google Docs was better than Office (and free!).</p>
+                The theoretical unlimited computing power and collaboration features meant Google Docs was better than
+                Office (and free!).</p>
                                     <p>Then something happened at Google. I’m not sure what. But they stopped innovating on cloud software.</p>
                                 </blockquote>
-                                <blockquote>
+                                <p>Little kid clear party car message situation now. Deserunt voluptatibus omnis. Iste doloremque consequuntur consectetur.</p>
+                                <blockquote class="large">
 
                                     <p>Docs and Sheets haven’t changed in a decade. Google Drive remains impossible to navigate. Sharing is
                 complicated. Sheets freezes up. I can’t easily interact with a Sheets API (I’ve tried!). Docs still
@@ -162,5 +165,32 @@ layout: base.njk
                                     <a class="" href="#">Read more →</a>
                                 </div>
                             </div>
+
+                            <ul>
+                                {% set items = pagination.items | reverse %}
+
+                                {% for entry in items %}
+                                    <li class="mb-3 lg:mb-0">
+                                        <a class="py-1 lg:flex items-center justify-between no-underline" href="{{ entry.url }}">
+                                            <span class="underline">{{ entry.data.title }}</span>
+                                            {% if entry.data.tags %}
+                                                <ul>
+                                                    {% for tag in entry.data.tags %}
+                                                        <li>{{ tag }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            {% endif %}
+                                            <time data-date="{{ entry.date }}" datetime="{{ entry.date | htmlDateString }}"
+                    class="post-date block text-gray-500 text-sm mt-1 lg:mt-0">{{ entry.date | prettyDate }}</time>
+                                        </a>
+                                        {% if entry.data.page.excerpt %}
+                                            {{ entry.data.page.excerpt | md | safe }}
+                                        {% else %}
+                                            {{ content }}
+                                            <p>test</p>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
 
                         </section>

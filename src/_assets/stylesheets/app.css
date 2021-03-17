@@ -22,8 +22,7 @@
     --color-primary: #3BF0E4;
     --color-primary-offset: #1CBDB2;
     --color-secondary: #FFE57F;
-    --color-gradient-start: #3BF0E4;
-    --color-gradient-end: #BCA1F7;
+    --color-gradient: 94deg, #3BF0E4, #BCA1F7, #FF7170, #F49267, #FFE532;
     --mono: "MONO"0;
     /* Monospace: Sans (natural-width) or Mono (fixed-width) */
     --casl: "CASL"0;
@@ -47,11 +46,11 @@ button:focus {
 }
 
 
-:is(header) a {
-    @apply text-text fill-current;
+header a {
+    @apply text-text fill-current transition;
 }
 
-:is(header) a:hover {
+header a:hover {
     @apply text-primary border-none;
 }
 
@@ -59,19 +58,19 @@ header :not(ul) a:hover {
     @apply  border-bgContrast border;
 }
 
-:is(main) a {
-    @apply text-primary border-b border-bgContrast;
+main a {
+    @apply text-primary border-b border-bgContrast transition;
 }
 
-:is(main) a:hover {
+main a:hover {
     @apply text-primaryOffset border-b border-textSubtle;
 }
 
-:is(footer) a {
-    @apply text-textContrast;
+footer a {
+    @apply text-textContrast transition;
 }
 
-:is(footer) a:hover {
+footer a:hover {
     @apply text-primary;
 }
 
@@ -194,7 +193,7 @@ h1+h3 {
 }
 
 .gradient {
-    background: linear-gradient(94deg, #3BF0E4, #BCA1F7, #FF7170, #F49267, #FFE532);
+    background: linear-gradient(var(--color-gradient));
     background-size: 200% 200%;
     animation: gradient 4s ease infinite !important;
     -webkit-background-clip: text;
@@ -250,20 +249,29 @@ iframe {
 }
 
 blockquote {
+    @apply border-l-2 border-secondary pl-5 text-textContrast;
+    --casl: "CASL"1;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+}
+
+blockquote.large {
     @apply -mx-5 my-5 border-l-2 border-secondary bg-bgOffset px-5 py-1;
 }
 
 @screen md {
     blockquote {
+        @apply ml-0 pl-8;
+    }
+    blockquote.large {
         @apply border-l-4 -mx-8 px-8 py-2 text-18;
     }
 }
 
-blockquote :first-child {
+blockquote.large :first-child {
     @apply mt-4;
 }
 
-blockquote :last-child {
+blockquote.large :last-child {
     @apply mb-4;
 }
 

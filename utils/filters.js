@@ -7,5 +7,15 @@ module.exports = {
       return DateTime.fromJSDate(dateObj, {
         zone: 'utc'
       }).toFormat('yyyy-LL-dd');
+    },
+    prettyDate: (dateObj) => {
+      return DateTime.fromJSDate(dateObj, {
+        zone: 'utc'
+      }).toFormat('MMMM dd, yyyy');
+    },
+    formatDate: (dateObj, format) => {
+      return DateTime.fromJSDate(dateObj, {
+        zone: 'utc'
+      }).toFormat(format);
     }
 }

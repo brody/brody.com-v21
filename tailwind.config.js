@@ -23,8 +23,6 @@ module.exports = {
         primary: 'var(--color-primary)',
         primaryOffset: 'var(--color-primary-offset)',
         secondary: 'var(--color-secondary)',
-        gradientStart: 'var(--color-gradient-start)',
-        gradientEnd: 'var(--color-gradient-end)'
       },
       fontFamily: {
         var: ['Recursive', 'sans-serif'],
@@ -32,12 +30,16 @@ module.exports = {
       gridTemplateColumns: {
         'grid': '1fr minmax(0, 8ch) min(65ch, 100%) minmax(0, 8ch) 1fr;',
       },
-      maxWidth: { 
-        '65ch': '65ch', 
-      } 
+      maxWidth: {
+        '65ch': '65ch',
+      }
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      ringColor: ['hover', 'active'],
+    }
+  },
   plugins: [],
   purge: process.env.NODE_ENV === 'production' ? {
     enabled: true,
