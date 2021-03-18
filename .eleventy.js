@@ -1,18 +1,82 @@
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const collections = require('./utils/collections.js')
-const markdownIt = require("markdown-it");
-const markdownItOptions = {
-    html: true,
-    breaks: true,
-    linkify: true
-  }  
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
+const markdownIt = require('markdown-it')
+const Image = require("@11ty/eleventy-img");
 
+async function imageShortcode(src, alt, sizes) {
+    let metadata = await Image(src, {
+      widths: [300, 600],
+      formats: ["avif", "jpeg"]
+    });
+  
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+    };
+  
+    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    return Image.generateHTML(metadata, imageAttributes);
+  }
 
 
 module.exports = function (eleventyConfig) {
+    // syntaxHighlight plugin
+    eleventyConfig.addPlugin(syntaxHighlight, {
+        templateFormats: ["njk", "md"],
+    });
+    
+    // eleventy-img shortcodes
+    // eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+    // eleventyConfig.addLiquidShortcode("image", imageShortcode);
+    // eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
+    eleventyConfig.addNunjucksAsyncShortcode("Image", async (src, alt) => {
+        if (!alt) {
+            throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+        }
+
+        let stats = await Image(src, {
+            widths: [25, 320, 640, 960, 1024],
+            formats: ["jpeg"],
+            urlPath: "/static/",
+            outputDir: "./dist/static/",
+        });
+
+        let lowestSrc = stats["jpeg"][0];
+
+        const srcset = Object.keys(stats).reduce(
+            (acc, format) => ({
+                ...acc,
+                [format]: stats[format].reduce(
+                    (_acc, curr) => `${_acc} ${curr.srcset} ,`,
+                    ""
+                ),
+            }), {}
+        );
+
+        const source = `<source type="image/jpeg" data-srcset="${srcset["jpeg"]}" >`;
+
+        const img = `<img class="lazy w-full" 
+                            alt="${alt}"
+                            src = "${lowestSrc.url}"
+                            data-src="${lowestSrc.url}"
+                            data-sizes='(min-width: 1024px) 1024px, 100vw'
+                            data-srcset="${srcset["jpeg"]}"
+                            width="${lowestSrc.width}"
+                            height="${lowestSrc.height}">`;
+
+        return `<picture> ${source} ${img} </picture>`;
+    });
+
     // Folders to copy to build dir (See. 1.1)
     eleventyConfig.addPassthroughCopy("src/static");
+
+    eleventyConfig.addPassthroughCopy("img");
+
 
     // Filters 
     Object.keys(filters).forEach((filterName) => {
@@ -36,13 +100,19 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
         // Optional, default is "---"
-        excerpt_separator: "<!-- excerpt -->",
+        excerpt_separator: "~~",
     });
+
+    eleventyConfig.setLibrary("md", markdownIt({
+        html: true,
+        breaks: true,
+        linkify: true
+    }).use(require('markdown-it-prism')));
+
 
     eleventyConfig.addFilter("md", function (content = "") {
         return markdownIt({ html: true }).render(content);
       });
-
 
     return {
         dir: {
@@ -53,6 +123,7 @@ module.exports = function (eleventyConfig) {
         },
         templateFormats: ["html", "md", "njk"],
         htmlTemplateEngine: "njk",
+        markdownTemplateEngine: 'njk',
 
         // 1.1 Enable eleventy to pass dirs specified above
         passthroughFileCopy: true

@@ -19,7 +19,7 @@ It’s worth noting; this is a personal note, it’s not a tutorial - it’s som
 
 Rename all files recursively from the current dir to `YEAR-MONTH-DAY_HOURSMINSSECS.ext` eg: `2020-06-10_093033.jpg`
 
-<!-- excerpt -->
+~~
 
 
 ```bash
