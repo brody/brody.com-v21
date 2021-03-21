@@ -1,66 +1,68 @@
-const filters = require('./utils/filters.js')
-const transforms = require('./utils/transforms.js')
-const collections = require('./utils/collections.js')
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
-const markdownIt = require('markdown-it')
-const Image = require("@11ty/eleventy-img");
+const filters = require("./utils/filters.js");
+const transforms = require("./utils/transforms.js");
+const collections = require("./utils/collections.js");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require("markdown-it");
+const image = require("@11ty/eleventy-img");
+const svgContents = require("eleventy-plugin-svg-contents");
 
 async function imageShortcode(src, alt, sizes) {
-    let metadata = await Image(src, {
-      widths: [300, 600],
-      formats: ["avif", "jpeg"]
-    });
-  
-    let imageAttributes = {
-      alt,
-      sizes,
-      loading: "lazy",
-      decoding: "async",
-    };
-  
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes);
-  }
+	let metadata = await Image(src, {
+		widths: [300, 600],
+		formats: ["avif", "jpeg"],
+	});
 
+	let imageAttributes = {
+		alt,
+		sizes,
+		loading: "lazy",
+		decoding: "async",
+	};
+
+	// You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+	return image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = function (eleventyConfig) {
-    // syntaxHighlight plugin
-    eleventyConfig.addPlugin(syntaxHighlight, {
-        templateFormats: ["njk", "md"],
-    });
-    
-    // eleventy-img shortcodes
-    // eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-    // eleventyConfig.addLiquidShortcode("image", imageShortcode);
-    // eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+	// syntaxHighlight plugin
+	eleventyConfig.addPlugin(syntaxHighlight, {
+		templateFormats: ["njk", "md"],
+	});
+	eleventyConfig.addPlugin(svgContents);
 
-    eleventyConfig.addNunjucksAsyncShortcode("Image", async (src, alt) => {
-        if (!alt) {
-            throw new Error(`Missing \`alt\` on myImage from: ${src}`);
-        }
+	// eleventy-img shortcodes
+	// eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+	// eleventyConfig.addLiquidShortcode("image", imageShortcode);
+	// eleventyConfig.addJavaScriptFunction("image", imageShortcode);
 
-        let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1024],
-            formats: ["jpeg"],
-            urlPath: "/static/",
-            outputDir: "./dist/static/",
-        });
+	eleventyConfig.addNunjucksAsyncShortcode("image", async (src, alt) => {
+		if (!alt) {
+			throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+		}
 
-        let lowestSrc = stats["jpeg"][0];
+		let stats = await Image(src, {
+			widths: [25, 320, 640, 960, 1024],
+			formats: ["jpeg"],
+			urlPath: "/static/",
+			outputDir: "./dist/static/",
+		});
 
-        const srcset = Object.keys(stats).reduce(
-            (acc, format) => ({
-                ...acc,
-                [format]: stats[format].reduce(
-                    (_acc, curr) => `${_acc} ${curr.srcset} ,`,
-                    ""
-                ),
-            }), {}
-        );
+		let lowestSrc = stats["jpeg"][0];
 
-        const source = `<source type="image/jpeg" data-srcset="${srcset["jpeg"]}" >`;
+		const srcset = Object.keys(stats).reduce(
+			(acc, format) => ({
+				...acc,
+				[format]: stats[format].reduce(
+					(_acc, curr) => `${_acc} ${curr.srcset} ,`,
+					""
+				),
+			}),
+			{}
+		);
 
-        const img = `<img class="lazy w-full" 
+		const source = `<source type="image/jpeg" data-srcset="${srcset["jpeg"]}" >`;
+
+		const img = `<img class="lazy w-full" 
                             alt="${alt}"
                             src = "${lowestSrc.url}"
                             data-src="${lowestSrc.url}"
@@ -69,63 +71,64 @@ module.exports = function (eleventyConfig) {
                             width="${lowestSrc.width}"
                             height="${lowestSrc.height}">`;
 
-        return `<picture> ${source} ${img} </picture>`;
-    });
+		return `<picture> ${source} ${img} </picture>`;
+	});
 
-    // Folders to copy to build dir (See. 1.1)
-    eleventyConfig.addPassthroughCopy("src/static");
+	// Folders to copy to build dir (See. 1.1)
+	eleventyConfig.addPassthroughCopy("src/static");
+	eleventyConfig.addPassthroughCopy("img");
+	eleventyConfig.addPassthroughCopy("src/notes/assets");
 
-    eleventyConfig.addPassthroughCopy("img");
+	// Filters
+	Object.keys(filters).forEach((filterName) => {
+		eleventyConfig.addFilter(filterName, filters[filterName]);
+	});
 
+	// Transforms
+	Object.keys(transforms).forEach((transformName) => {
+		eleventyConfig.addTransform(transformName, transforms[transformName]);
+	});
 
-    // Filters 
-    Object.keys(filters).forEach((filterName) => {
-        eleventyConfig.addFilter(filterName, filters[filterName])
-    })
+	// Collections
+	Object.keys(collections).forEach((collectionName) => {
+		eleventyConfig.addCollection(collectionName, collections[collectionName]);
+	});
 
-    // Transforms
-    Object.keys(transforms).forEach((transformName) => {
-        eleventyConfig.addTransform(transformName, transforms[transformName])
-    })
+	// This allows Eleventy to watch for file changes during local development.
+	eleventyConfig.setUseGitIgnore(false);
 
-    // Collections
-    Object.keys(collections).forEach((collectionName) => {
-        eleventyConfig.addCollection(collectionName, collections[collectionName])
-    })
+	// Excerpt
+	eleventyConfig.setFrontMatterParsingOptions({
+		excerpt: true,
+		// Optional, default is "---"
+		excerpt_separator: "~~",
+	});
 
-    // This allows Eleventy to watch for file changes during local development.
-    eleventyConfig.setUseGitIgnore(false);
+	eleventyConfig.setLibrary(
+		"md",
+		markdownIt({
+			html: true,
+			breaks: true,
+			linkify: true,
+		}).use(require("markdown-it-prism"))
+	);
 
-    // Excerpt
-    eleventyConfig.setFrontMatterParsingOptions({
-        excerpt: true,
-        // Optional, default is "---"
-        excerpt_separator: "~~",
-    });
+	eleventyConfig.addFilter("md", function (content = "") {
+		return markdownIt({ html: true }).render(content);
+	});
 
-    eleventyConfig.setLibrary("md", markdownIt({
-        html: true,
-        breaks: true,
-        linkify: true
-    }).use(require('markdown-it-prism')));
+	return {
+		dir: {
+			input: "src/",
+			output: "dist",
+			includes: "_includes",
+			layouts: "_layouts",
+		},
+		templateFormats: ["html", "md", "njk"],
+		htmlTemplateEngine: "njk",
+		markdownTemplateEngine: "njk",
 
-
-    eleventyConfig.addFilter("md", function (content = "") {
-        return markdownIt({ html: true }).render(content);
-      });
-
-    return {
-        dir: {
-            input: "src/",
-            output: "dist",
-            includes: "_includes",
-            layouts: "_layouts"
-        },
-        templateFormats: ["html", "md", "njk"],
-        htmlTemplateEngine: "njk",
-        markdownTemplateEngine: 'njk',
-
-        // 1.1 Enable eleventy to pass dirs specified above
-        passthroughFileCopy: true
-    };
+		// 1.1 Enable eleventy to pass dirs specified above
+		passthroughFileCopy: true,
+	};
 };

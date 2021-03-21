@@ -1,0 +1,14 @@
+<svg id="now-playing" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <style>
+        <![CDATA[#now-playing-bar {animation: now-playing-bar__ts 1300ms linear infinite normal forwards}@keyframes now-playing-bar__ts { 0% {transform: translate(1.500000px,16px) scale(1,1.469610)} 15.384615% {transform: translate(1.500000px,16px) scale(1,2.746652)} 30.769231% {transform: translate(1.500000px,16px) scale(1,0.915976)} 61.538462% {transform: translate(1.500000px,16px) scale(1,3.666059)} 100% {transform: translate(1.500000px,16px) scale(1,0.690486)} }#bar-2_ts {animation: bar-2_ts__ts 1300ms linear infinite normal forwards}@keyframes bar-2_ts__ts { 0% {transform: translate(6.500000px,16px) scale(1,1)} 7.692308% {transform: translate(6.500000px,16px) scale(1,0.849129)} 30.769231% {transform: translate(6.500000px,16px) scale(1,1.230878)} 69.230769% {transform: translate(6.500000px,16px) scale(1,0.307613)} 76.923077% {transform: translate(6.500000px,16px) scale(1,0.461842)} 84.615385% {transform: translate(6.500000px,16px) scale(1,0.307613)} 100% {transform: translate(6.500000px,16px) scale(1,0.769128)} }#bar-3_ts {animation: bar-3_ts__ts 1300ms linear infinite normal forwards}@keyframes bar-3_ts__ts { 0% {transform: translate(13px,16px) scale(1,1)} 15.384615% {transform: translate(13px,16px) scale(1,0.502744)} 46.153846% {transform: translate(13px,16px) scale(1,1.874795)} 61.538462% {transform: translate(13px,16px) scale(1,1.127769)} 76.923077% {transform: translate(13px,16px) scale(1,1.998726)} 100% {transform: translate(13px,16px) scale(1,1.125008)} }]]>
+    </style>
+    <g id="now-playing-bar" class="fill-current" transform="translate(1.500000,16) scale(1,1.469610)">
+        <rect id="bar-1" width="3" height="4.364584" rx="0" ry="0" transform="translate(-1.500000,-4.364584)" stroke="none" stroke-width="1" />
+    </g>
+    <g id="bar-2_ts" transform="translate(6.500000,16) scale(1,1)">
+        <rect id="bar-2" width="3" height="13" rx="0" ry="0" transform="translate(0,-13)" stroke="none" stroke-width="1" />
+    </g>
+    <g id="bar-3_ts" transform="translate(13,16) scale(1,1)">
+        <rect id="bar-3" width="3" height="8" rx="0" ry="0" transform="translate(0,-8)" stroke="none" stroke-width="1" />
+    </g>
+</svg>

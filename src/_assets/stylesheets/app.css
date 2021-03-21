@@ -1,303 +1,335 @@
-@import 'utils/_tailwind.css';
-@import 'utils/_accessibility.css';
+@import "utils/_tailwind.css";
+@import "utils/_accessibility.css";
 
 /* purgecss start ignore */
-@import 'utils/_syntax.css';
+@import "utils/_syntax.css";
 
 @font-face {
-    font-family: 'Recursive';
-    src: url('/static/fonts/Recursive_VF_1.074.woff2') format('woff2-variations');
-    font-weight: 300 1000;
-    font-style: oblique 0deg 14deg;
+	font-family: "Recursive";
+	src: url("/static/fonts/Recursive_VF_1.074.woff2") format("woff2-variations");
+	font-weight: 300 1000;
+	font-style: oblique 0deg 14deg;
 }
 
 :root {
-    --color-text: #94A8CC;
-    --color-text-contrast: #DFE4EC;
-    --color-text-subtle: #73829E;
-    --color-bg: #040D21;
-    --color-bg-offset: #0C162D;
-    --color-bg-contrast: #1A263D;
-    --color-bg-contrast-90: rgba(26, 38, 61, 0.9);
-    --color-primary: #3BF0E4;
-    --color-primary-offset: #1CBDB2;
-    --color-secondary: #FFE57F;
-    --color-gradient: 94deg, #3BF0E4, #BCA1F7, #FF7170, #F49267, #FFE532;
-    --mono: "MONO"0;
-    /* Monospace: Sans (natural-width) or Mono (fixed-width) */
-    --casl: "CASL"0;
-    /* Casual: Linear to Casual */
-    --wght: "wght"382;
-    /* Weight: Light to ExtraBlack; usually set with `font-weight` */
-    --slnt: "slnt"-1;
-    /* Slant: 0 to -15 degrees, auto cursive at -14 */
-    --CRSV: "CRSV"0.5;
-    /* Cursive: always roman, auto substitution, or always cursive */
-} 
+	--color-text: #94a8cc;
+	--color-text-contrast: #dfe4ec;
+	--color-text-subtle: #73829e;
+	--color-bg: #040d21;
+	--color-bg-offset: #0c162d;
+	--color-bg-contrast: #1a263d;
+	--color-bg-contrast-90: rgba(26, 38, 61, 0.9);
+	--color-primary: #3bf0e4;
+	--color-primary-offset: #1cbdb2;
+	--color-secondary: #ffe57f;
+	--color-gradient: 94deg, #3bf0e4, #bca1f7, #ff7170, #f49267, #ffe532;
+	--mono: "MONO" 0; /* Monospace: Sans (natural-width) or Mono (fixed-width) */
+	--casl: "CASL" 0; /* Casual: Linear to Casual */
+	--wght: "wght" 382; /* Weight: Light to ExtraBlack; usually set with `font-weight` */
+	--slnt: "slnt"-1; /* Slant: 0 to -15 degrees, auto cursive at -14 */
+	--CRSV: "CRSV" 0.5; /* Cursive: always roman, auto substitution, or always cursive */
+}
 
 :focus,
 button:focus {
-    outline: solid 3px rgba(0, 0, 0, 0.05);
-    outline-offset: 4px;
+	outline: solid 3px rgba(0, 0, 0, 0.05);
+	outline-offset: 4px;
 }
 
 .font-var {
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
-
 header a {
-    @apply text-text fill-current transition;
+	@apply text-text fill-current transition;
 }
 
 header a:hover {
-    @apply text-primary border-none;
+	@apply text-primary border-none;
 }
 
 header :not(ul) a:hover {
-    @apply  border-bgContrast border;
+	@apply border-bgContrast border;
 }
 
 main a {
-    @apply text-primary border-b border-bgContrast transition;
+	@apply text-primary border-b border-bgContrast transition;
 }
 
 main a:hover {
-    @apply text-primaryOffset border-b border-textSubtle;
+	@apply text-primaryOffset border-b border-textSubtle;
 }
 
 footer a {
-    @apply text-textContrast transition;
+	@apply text-textContrast transition;
 }
 
 footer a:hover {
-    @apply text-primary;
+	@apply text-primary;
 }
 
-p, pre {
-    @apply my-5
+p,
+pre {
+	@apply my-5;
 }
 
 img {
-    @apply rounded-md;
+	@apply rounded-md;
 }
 
 :is(h1, h2, h3, h4, h5) {
-    @apply leading-tight;
-    --mono: "MONO"0;
-    --casl: "CASL"1;
-    --wght: "wght"678;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+	@apply leading-tight;
+	--mono: "MONO" 0.25;
+	--casl: "CASL" 0.52;
+	--wght: "wght" 635;
+	--slnt: "slnt"-5.1;
+	--CRSV: "CRSV" 1;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
 :is(h1, h2, h3, h4, h5) a {
-    @apply text-textContrast border-b border-bgContrast;
+	@apply text-textContrast border-b border-bgContrast;
 }
 
 :is(h1, h2, h3, h4, h5) a:hover {
-    @apply text-primary border-bgContrast;
+	@apply text-primary border-bgContrast;
 }
 
 :is(h1, h2, h3, h4, h5) a:hover svg {
-    @apply fill-current text-primaryOffset;
+	@apply fill-current text-primaryOffset;
 }
 
 h1 {
-    @apply text-24 mb-2 text-textContrast;
+	@apply text-24 mb-2 text-textContrast;
 }
 
 h2 {
-    @apply text-22 mt-8 mb-5 text-textContrast;
+	@apply text-22 mt-8 mb-5 text-textContrast;
 }
-
 
 h3 {
-    @apply text-18 mt-6 mb-5 text-textContrast;
+	@apply text-18 mt-6 mb-5 text-textContrast;
 }
 
-h1+h2 {
-    @apply leading-snug text-textSubtle;
-    --mono: "MONO"0;
-    --casl: "CASL"1;
-    /* --wght: "wght"382; */
-    /* --slnt: "slnt"-12; */
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+h1 + h2 {
+	@apply leading-snug text-textSubtle;
+	--mono: "MONO" 0;
+	--casl: "CASL" 1;
+	/* --wght: "wght"382; */
+	/* --slnt: "slnt"-12; */
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
-h1+h3 {
-    @apply leading-snug text-textSubtle mt-2 mb-4;
-    --mono: "MONO"0;
-    --casl: "CASL"1;
-    --wght: "wght"382;
-    --slnt: "slnt"-12;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+h1 + h3 {
+	@apply leading-snug text-textSubtle mt-2 mb-4;
+	--mono: "MONO" 0;
+	--casl: "CASL" 1;
+	--wght: "wght" 382;
+	--slnt: "slnt"-12;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
-
 
 @screen md {
-    h1 {
-        @apply text-28;
-    }
+	h1 {
+		@apply text-28;
+	}
 
-    h2 {
-        @apply text-24;
-    }
+	h2 {
+		@apply text-24;
+	}
 
-    h3 { 
-        @apply text-20;
-    }
+	h3 {
+		@apply text-20;
+	}
 
-    h1+h2 {
-    }
+	h1 + h2 {
+	}
 
-    h1+h3 {
-        @apply leading-snug text-textSubtle mt-4 mb-4;
-    } 
+	h1 + h3 {
+		@apply leading-snug text-textSubtle mt-4 mb-4;
+	}
 }
 
 @screen lg {
-    h1 {
-        @apply text-32 mb-4;
-    }
+	h1 {
+		@apply text-32 mb-4;
+	}
 
-    h2 {
-        @apply text-28;
-    }
+	h2 {
+		@apply text-28;
+	}
 
-    h3 {
-        @apply text-22;
-    }
+	h3 {
+		@apply text-22;
+	}
 
-    h1+h2 {
-        /* @apply ; */
-    }
+	h1 + h2 {
+		/* @apply ; */
+	}
 
-    h1+h3 {
-        @apply leading-snug text-textSubtle mt-4 mb-4;
-    }
-
+	h1 + h3 {
+		@apply leading-snug text-textSubtle mt-4 mb-4;
+	}
 }
 
 figure {
-    figcaption {
-        @apply text-12 text-textSubtle text-center mt-2;
-    }
+	figcaption {
+		@apply text-12 text-textSubtle text-center mt-2;
+	}
 }
 
 aside {
-    /* mono casual */
-    @apply hidden text-12 text-textSubtle mb-3 text-left;
+	/* mono casual */
+	@apply hidden text-12 text-textSubtle mb-3 text-left;
 }
 @screen lg {
-    aside {
-        @apply inline-block absolute right-0 w-40 -mr-48;
-    }
+	aside {
+		@apply inline-block absolute right-0 w-40 -mr-48;
+	}
 }
 @screen xl {
-    aside {
-        @apply w-56 -mr-64;
-    }
+	aside {
+		@apply w-56 -mr-64;
+	}
 }
 
 hr {
-    @apply border-bgContrast;
+	@apply border-bgContrast my-8;
+}
+
+mark {
+	@apply bg-primaryOffset text-bg px-2;
+	border-radius: 1em 0.5em 1.2em 0.25em;
+	padding-top: 0.125em;
+}
+p mark {
+	--wght: "wght" 382;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
 .bg-blur {
-    backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
 }
 
 .mono {
-    --mono: "MONO"0.8;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+	--mono: "MONO" 0.8;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
 .casual {
-    --casl: "CASL"1;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+	--casl: "CASL" 1;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
 .gradient {
-    background: linear-gradient(var(--color-gradient));
-    background-size: 200% 200%;
-    animation: gradient 4s ease infinite !important;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-transition: color 0.2s ease-out;
-    -moz-transition: color 0.2s ease-out;
-    -o-transition: color 0.2s ease-out;
-    transition: color 0.2s ease-out;
+	background: linear-gradient(var(--color-gradient));
+	background-size: 200% 200%;
+	animation: gradient 4s ease infinite !important;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-transition: color 0.2s ease-out;
+	-moz-transition: color 0.2s ease-out;
+	-o-transition: color 0.2s ease-out;
+	transition: color 0.2s ease-out;
 }
 
+article ol {
+	@apply list-decimal pl-6  my-5;
+	li {
+		@apply my-4;
+	}
+	::marker {
+		@apply text-textSubtle;
+	}
+}
+
+article ul {
+	@apply list-disc pl-6 my-5;
+	li {
+		@apply my-4;
+	}
+	::marker {
+		@apply text-textSubtle;
+	}
+}
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+	0% {
+		background-position: 0% 50%;
+	}
 
-    50% {
-        background-position: 100% 50%;
-    }
+	50% {
+		background-position: 100% 50%;
+	}
 
-    100% {
-        background-position: 0% 50%;
-    }
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .tag {
-    margin-right: 1rem;
-    --casl: "CASL"1;
-    --mono: "MONO"0.8;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+	margin-right: 1rem;
+	--casl: "CASL" 1;
+	--mono: "MONO" 0.8;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
 .tag a {
-    @apply text-textContrast border-0;
+	@apply text-textContrast border-0;
 }
 
 .tag a:hover {
-    @apply text-primary border-b border-textSubtle;
+	@apply text-primary border-b border-textSubtle;
 }
 
 .tag a::before {
-    @apply text-textSubtle;
-    margin-right: 2px;
-    content: '#';
-    --casl: "CASL"0;
-    --mono: "MONO"0.8;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
-
+	@apply text-textSubtle;
+	margin-right: 2px;
+	content: "#";
+	--casl: "CASL" 0;
+	--mono: "MONO" 0.8;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
 iframe {
-    @apply max-w-full my-5;
+	@apply max-w-full my-5;
 }
 
 blockquote {
-    @apply border-l-2 border-secondary pl-5 text-textContrast;
-    --casl: "CASL"1;
-    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+	@apply border-l-2 border-secondary pl-5;
+	--casl: "CASL" 1;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
 }
 
 blockquote.large {
-    @apply -mx-5 my-5 border-l-2 border-secondary bg-bgOffset px-5 py-1;
+	@apply -mx-5 my-5 border-l-2 border-secondary bg-bgOffset px-5 py-1;
 }
 
 @screen md {
-    blockquote {
-        @apply ml-0 pl-6;
-    }
-    blockquote.large {
-        @apply border-l-4 -mx-8 px-8 py-2 text-18;
-    }
+	blockquote {
+		@apply ml-0 pl-6;
+	}
+	blockquote.large {
+		@apply border-l-4 -mx-8 px-8 py-2 text-18;
+	}
 }
 
 blockquote.large :first-child {
-    @apply mt-4;
+	@apply mt-4;
 }
 
 blockquote.large :last-child {
-    @apply mb-4;
+	@apply mb-4;
 }
 
 /* purgecss end ignore */

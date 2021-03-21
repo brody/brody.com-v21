@@ -34,6 +34,8 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy-img": "^0.8.2",
+		"@tailwindcss/line-clamp": "^0.2.0",
+		"eleventy-plugin-svg-contents": "^0.7.0",
 		"markdown-it-prism": "^2.1.6",
 		"postcss": "^8.2.8"
 	}
