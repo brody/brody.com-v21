@@ -5,8 +5,8 @@ tags:
   - Side Project
 published: true
 slug: trello-stickers
-featured_image: ./assets/trello-stickers/og.png
-og_image: ./assets/trello-stickers/og.png
+featured_image: /notes/assets/trello-stickers/og.png
+og_image: /notes/assets/trello-stickers/og.png
 description: Jazz up your Trello board with these Sticker Sets
 ---
 

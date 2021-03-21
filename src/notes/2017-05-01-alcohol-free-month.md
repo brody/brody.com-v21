@@ -5,8 +5,8 @@ published: true
 slug: alcohol-free-month
 tags:
   - Life
-cover-image: ./assets/alcohol-free-month/cover.jpg
-og-image: ./assets/alcohol-free-month/cover.jpg
+cover-image: /notes/assets/alcohol-free-month/cover.jpg
+og-image: /notes/assets/alcohol-free-month/cover.jpg
 description: I can already hear the jeers from friends, but having abstained for 4 week blocks in the past, I know there are plenty benefits to taking a break from the hard stuff.
 ---
 

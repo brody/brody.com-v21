@@ -5,8 +5,8 @@ tags:
   - Design
   - Development
 slug: nightmode
-cover-image: ./assets/brody.com-nightmode/cover.jpg
-og-image: ./assets/brody.com-nightmode/cover.jpg
+cover-image: /notes/assets/brody.com-nightmode/cover.jpg
+og-image: /notes/assets/brody.com-nightmode/cover.jpg
 description: As a fun weekend project, I implemented a Nightmode that kicks in between 6:00pm & 8:00am.
 ---
 

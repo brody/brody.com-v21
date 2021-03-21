@@ -3,11 +3,11 @@ title: Reinventing Organizations
 date: 2016-11-15
 published: true
 tags:
-  - Book Notes
+  - Book
   - Culture
 slug: reinventing-organizations
-cover-image: ./assets/reinventing-organizations/cover.jpg
-og-image: ./assets/reinventing-organizations/cover.jpg
+cover-image: /notes/assets/reinventing-organizations/cover.jpg
+og-image: /notes/assets/reinventing-organizations/cover.jpg
 description: The book that has inspired organizations to take a radical leap and adopt a whole different set of management principles and practices.
 
 source-title:
@@ -51,6 +51,6 @@ book-rating: 4-5
 
 # Talk and Q&A by Frédéric Laloux
 
-<div class="16/9">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gcS04BI2sbk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9 my-5">
+<iframe src="https://www.youtube.com/embed/gcS04BI2sbk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 </div>

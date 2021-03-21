@@ -45,7 +45,10 @@ module.exports = {
 			ringColor: ["hover", "active"],
 		},
 	},
-	plugins: [require("@tailwindcss/line-clamp")],
+	plugins: [
+		require("@tailwindcss/line-clamp"),
+		require("@tailwindcss/aspect-ratio"),
+	],
 	purge:
 		process.env.NODE_ENV === "production"
 			? {

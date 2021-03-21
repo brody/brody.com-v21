@@ -5,6 +5,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const image = require("@11ty/eleventy-img");
 const svgContents = require("eleventy-plugin-svg-contents");
+const fs = require("fs");
 
 async function imageShortcode(src, alt, sizes) {
 	let metadata = await Image(src, {
@@ -115,6 +116,21 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addFilter("md", function (content = "") {
 		return markdownIt({ html: true }).render(content);
+	});
+
+	eleventyConfig.setBrowserSyncConfig({
+		callbacks: {
+			ready: function (err, bs) {
+				bs.addMiddleware("*", (req, res) => {
+					const content_404 = fs.readFileSync("dist/404.html");
+					// Add 404 http status code in request header.
+					res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+					// Provides the 404 content without redirect.
+					res.write(content_404);
+					res.end();
+				});
+			},
+		},
 	});
 
 	return {

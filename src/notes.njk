@@ -4,19 +4,17 @@ title: Notes
 
 pagination:
   data: collections.notes
-  size: 10
+  size: 20
+  reverse: true 
 ---
 
-<main class="my-20">
+<main class="">
     <div class="container">
-        <h1 class="my-20 text-center font-bold text-3xl">{{ title }}</h1>
-
-        <div class="prose prose-sm text-testSubtle text-center my-20 max-w-lg mx-auto">
-            <p>Personal notes and snippets of code.</p>
-        </div>
+        <h1 class="title">{{ title }}</h1>
+        <h3 class="subtitle">Personal notes and snippets of code.</h3>
 
         <ul>
-            {% set items = pagination.items | reverse %}
+            {% set items = pagination.items %}
 
             {% for entry in items %}
                 <li class="mb-3 lg:mb-0">

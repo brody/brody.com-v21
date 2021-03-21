@@ -37,6 +37,8 @@ You only need a few things to run one yourself, with both local and remote team 
 
 - iPad with Apple Pencil & corresponding Whiteboard app
 
+~~
+
 # Recipe
 
 1. Pick team members of 2 at random.

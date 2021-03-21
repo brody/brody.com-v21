@@ -5,18 +5,15 @@
 		{{ '/src/static/nowplaying/track-placeholder.svg' | svgContents("w-12 h-12 mr-3 rounded") | safe }}
 
 		<div class="flex flex-col pt-1">
-			<div class="track flex leading-snug truncate">
+			<div class="track leading-snug line-clamp-1">
 				<a
-					href="https://www.last.fm/music/Sol%C3%A9+Bicycles/_/Sol%C3%A9+Fixtape+Vol.77"
-					target="_blank"
+					href="https://www.last.fm/music/Sol%C3%A9+Bicycles/_/Sol%C3%A9+Fixtape+Vol.77" target="_blank"
 					class="shadow-none mr-2 text-textContrast min-w-0"
-					>Solé Fixtape Vol.77
+					>Solé Fixtape Volume 77
 				</a>
-				<span class="artist min-w-0">Solé</span>
+				<span class="artist min-w-0">Solidad the Great</span>
 			</div>
-			<div
-				class="mono text-14 text-textSubtle track--now-playing flex flex-row align-bottom"
-		> 
+			<div class="mono text-14 text-textSubtle track--now-playing flex flex-row align-bottom" > 
 				Now Playing
 				{{ '/src/static/nowplaying/track-nowplaying.svg' | svgContents("ml-2 h-2 w-2 rounded-none self-center fill-current") | safe }}
 			</div>
