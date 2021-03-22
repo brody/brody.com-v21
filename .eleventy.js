@@ -3,7 +3,7 @@ const transforms = require("./utils/transforms.js");
 const collections = require("./utils/collections.js");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
-const image = require("@11ty/eleventy-img");
+const Image = require("@11ty/eleventy-img");
 const svgContents = require("eleventy-plugin-svg-contents");
 const fs = require("fs");
 
@@ -21,7 +21,7 @@ async function imageShortcode(src, alt, sizes) {
 	};
 
 	// You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-	return image.generateHTML(metadata, imageAttributes);
+	return Image.generateHTML(metadata, imageAttributes);
 }
 
 module.exports = function (eleventyConfig) {
