@@ -5,9 +5,9 @@ published: true
 slug: full-stack-anxiety
 description: I’m a designer, so I should probably learn responsive patterns, methods for remote user testing, Sketch, motion graphics, Framer, keep up to date with current design trends, and a million other things.
 og-image: ./images/full-stack-anxiety/og.gif
-tags: 
-- Design
-- Career
+tags:
+  - Design
+  - Career
 
 source-title:
 source-url:
@@ -35,11 +35,11 @@ Joel perfectly defines an anxiety common to Product Designers, but also outlines
 
 <iframe width="560" height="365" src="https://www.youtube.com/embed/VBK6WDOOg2I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-# 1\. Ask yourself
+## 1\. Ask yourself
 
 “What kind of work do I want to do in the future?” And, when approaching a new skill ask, “What am I becoming by learning this?” If that skill doesn’t help you become the person you want to be, then it may not be worth your attention.
 
-# 2\. Create some structure.
+## 2\. Create some structure.
 
 Remember that big, scary list that Califa presented? Make one for yourself.
 
@@ -47,7 +47,7 @@ Remember that big, scary list that Califa presented? Make one for yourself.
 
 A bit of organization — even a simple list on paper — eliminates the need to keep juggling those tasks in your brain.
 
-# 3\. Take the decision out of the moment.
+## 3\. Take the decision out of the moment.
 
 Califa suggests creating a simple if/then statement.
 
@@ -57,13 +57,13 @@ Califa suggests creating a simple if/then statement.
 
 Hopefully, this helps reduce that overwhelming list to something more approachable.
 
-# 4\. Stop chasing trends.
+## 4\. Stop chasing trends.
 
 Sketch kills Photoshop. React kills Angular. Rails kills PHP. JS kills Rails…and on and on. There’s always going to be something new. And all of them will die at some point.
 
 Prioritize transferrable skills, like typography, programming patterns and management. The more longevity a skill has, the better an idea it is to learn it.
 
-# 5\. Prioritize happiness.
+## 5\. Prioritize happiness.
 
 > “At the end of the day, life isn’t all about work, and nothing is worth being that anxious over.”
 

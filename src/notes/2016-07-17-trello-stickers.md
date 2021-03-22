@@ -20,7 +20,7 @@ Wait, how do I [install stickers](#instructions)?
 
 ---
 
-# Emoji Sticker Set
+## Emoji Sticker Set
 
 [Download](https://github.com/brody/trello-stickers/raw/master/emoji/emoji%20stickers.zip) the entire set.
 
@@ -89,7 +89,7 @@ Wait, how do I [install stickers](#instructions)?
 
 ---
 
-# Product Sticker Set
+## Product Sticker Set
 
 [Download](https://github.com/brody/trello-stickers/raw/master/product/product%20stickers.zip) the entire set.
 

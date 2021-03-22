@@ -14,7 +14,7 @@ pagination:
 
     <h3 class="subtitle">Currently, I’m designing software for the insurance industry at Mitti.</h3>
 
-    {% include "nowplaying.njk" %}
+    {# {% include "nowplaying.njk" %} #}
 
 </section>
 
@@ -25,10 +25,10 @@ pagination:
     {% for entry in items %}
 
         <div class="entry relative mb-20 md:mb-32 lg:mb-40">
-            <time data-date="{{ entry.date }}" datetime="{{ entry.date | htmlDateString }}" class="mono text-12 text-textSubtle mb-3 lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">{{ entry.date | prettyDate }}
+            <time data-date="{{ entry.date }}" datetime="{{ entry.date | htmlDateString }}" class="mono text-12 text-textSubtle mb-2 inline-block lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">{{ entry.date | prettyDate }}
             </time>
 
-            <h1 class="text-24 md:text-28 lg:text-32 text-textContrast mb-5">
+            <h1 class="title text-24 md:text-28 lg:text-32 text-textContrast mb-5">
                 <a href="{% if entry.data.link %}{{ entry.data.link }}{% else %}{{ entry.url }}{% endif %}" {% if entry.data.link %}target="_blank"{% endif %}>
                     {{ entry.data.title }}
                     {% if entry.data.link %}
@@ -66,7 +66,7 @@ pagination:
 
                 </ul>
                 {% if entry.data.page.excerpt %}
-                    <a class="" href="{{ entry.url }}">Read more →</a>
+                    <a class="" href="{{ entry.url }}">Continue reading →</a>
                 {% endif %}
             </div>
         </div>

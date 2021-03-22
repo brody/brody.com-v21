@@ -30,6 +30,10 @@
 	--CRSV: "CRSV" 0.5; /* Cursive: always roman, auto substitution, or always cursive */
 }
 
+::selection {
+	@apply bg-primaryOffset text-bg;
+}
+
 :focus,
 button:focus {
 	outline: solid 3px rgba(0, 0, 0, 0.05);
@@ -71,7 +75,14 @@ footer a:hover {
 
 p,
 pre {
-	@apply my-5;
+	@apply my-4;
+}
+
+@screen md {
+	p,
+	pre {
+		@apply my-5;
+	}
 }
 
 img {
@@ -79,11 +90,10 @@ img {
 }
 
 .title {
-	@apply leading-tight;
+	@apply leading-tight mt-0;
 	--mono: "MONO" 0;
 	--casl: "CASL" 1;
-	--wght: "wght" 678;
-	/* --CRSV: "CRSV" 1; */
+	--wght: "wght" 728;
 	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
 		var(--CRSV);
 }
@@ -98,12 +108,27 @@ img {
 		var(--CRSV);
 }
 
-:is(h1, h2, h3, h4, h5) {
+:is(h1, h2) {
 	@apply leading-tight;
 	--mono: "MONO" 0;
 	--casl: "CASL" 1;
-	--wght: "wght" 678;
-	--CRSV: "CRSV" 1;
+	--wght: "wght" 618;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
+}
+:is(h4) {
+	@apply leading-tight;
+	--mono: "MONO" 0.8;
+	--casl: "CASL" 1;
+	--wght: "wght" 518;
+	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+		var(--CRSV);
+}
+:is(h3, h5) {
+	@apply leading-tight;
+	--mono: "MONO" 0;
+	--casl: "CASL" 1;
+	--wght: "wght" 458;
 	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
 		var(--CRSV);
 }
@@ -121,39 +146,66 @@ img {
 }
 
 h1 {
-	@apply text-24 mb-2 text-textContrast;
+	@apply text-24 mt-12 mb-5 text-textContrast;
 }
 
 h2 {
-	@apply text-22 mt-8 mb-5 text-textContrast;
+	@apply text-20 mt-10 mb-4 text-textContrast;
 }
 
 h3 {
-	@apply text-18 mt-6 mb-5 text-textContrast;
+	@apply text-18 mt-6 mb-3 text-textContrast;
 }
 
-/* h1 + h2 {
-	@apply leading-snug text-textSubtle;
-	--mono: "MONO" 0;
-	--casl: "CASL" 1;
-
-	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
-		var(--CRSV);
+h4 {
+	@apply text-16 mt-6 mb-3 text-textContrast uppercase;
 }
 
-h1 + h3 {
-	@apply leading-snug text-textSubtle mt-2 mb-4;
-	--mono: "MONO" 0;
-	--casl: "CASL" 1;
-	--wght: "wght" 382;
-	--slnt: "slnt"-12;
-	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
-		var(--CRSV);
-} */
+h2 + h3 {
+	@apply mt-2;
+}
+h3 + p,
+h4 + p {
+	@apply mt-3;
+}
 
 @screen md {
+	:is(h3, h4, h5) {
+		@apply leading-snug;
+	}
 	h1 {
-		@apply text-28;
+		@apply text-28 mt-10 mb-5;
+	}
+
+	h2 {
+		@apply text-24 mt-9 mb-5;
+	}
+
+	h3 {
+		@apply text-20 mt-8 mb-4;
+	}
+	h4 {
+		@apply text-16;
+	}
+
+	h1 + h2 {
+	}
+
+	h1 + h3 {
+		@apply leading-snug mt-3 mb-4;
+	}
+	h2 + h3 {
+		@apply mt-6;
+	}
+	h3 + p,
+	h4 + p {
+		@apply mt-4;
+	}
+}
+
+@screen lg {
+	h1 {
+		@apply text-32 mb-4;
 	}
 
 	h2 {
@@ -165,28 +217,6 @@ h1 + h3 {
 	}
 
 	h1 + h2 {
-	}
-
-	h1 + h3 {
-		@apply leading-snug text-textSubtle mt-4 mb-4;
-	}
-}
-
-@screen lg {
-	h1 {
-		@apply text-32 mb-4;
-	}
-
-	h2 {
-		@apply text-28;
-	}
-
-	h3 {
-		@apply text-22;
-	}
-
-	h1 + h2 {
-		/* @apply ; */
 	}
 
 	h1 + h3 {
@@ -220,13 +250,14 @@ hr {
 }
 
 mark {
-	@apply bg-primaryOffset text-bg px-2;
-	border-radius: 1em 0.5em 1.2em 0.25em;
-	padding-top: 0.125em;
+	@apply bg-bgContrast text-primary px-1;
+	border-radius: 0.25em 0.15em 0.5em 0.1em;
+	padding-top: 0.05em;
+	padding-bottom: 0.05em;
 }
 
 p mark {
-	--wght: "wght" 382;
+	--wght: "wght" 422;
 	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
 		var(--CRSV);
 }
@@ -263,23 +294,24 @@ p mark {
 	transition: color 0.2s ease-out;
 }
 
-article ol {
-	@apply list-decimal pl-6  my-5;
-	li {
-		@apply my-4;
+article {
+	ol {
+		@apply list-decimal pl-6  my-5;
+		li {
+			@apply my-4;
+		}
+		::marker {
+			@apply text-textSubtle;
+		}
 	}
-	::marker {
-		@apply text-textSubtle;
-	}
-}
-
-article ul {
-	@apply list-disc pl-6 my-5;
-	li {
-		@apply my-4;
-	}
-	::marker {
-		@apply text-textSubtle;
+	ul {
+		@apply list-disc pl-6 my-5;
+		li {
+			@apply my-4;
+		}
+		::marker {
+			@apply text-textSubtle;
+		}
 	}
 }
 

@@ -1,17 +1,17 @@
-<div
-	class="inline-flex flex-wrap max-w-full bg-bgOffset rounded-md py-2 pl-2 pr-4 min-w-0 flex-1"
+<a
+					href="https://www.last.fm/music/Sol%C3%A9+Bicycles/_/Sol%C3%A9+Fixtape+Vol.77" target="_blank"
+	class="inline-flex flex-wrap max-w-full bg-bgOffset hover:bg-bgContrast transition rounded-md border-none py-2 pl-2 pr-4 min-w-0 flex-1"
 >
 	<div class="flex flex-row">
-		{{ '/src/static/nowplaying/track-placeholder.svg' | svgContents("w-12 h-12 mr-3 rounded") | safe }}
+		{{ '/src/static/nowplaying/track-placeholder.svg' | svgContents("text-text w-12 h-12 mr-3 rounded") | safe }}
 
 		<div class="flex flex-col pt-1">
 			<div class="track leading-snug line-clamp-1">
-				<a
-					href="https://www.last.fm/music/Sol%C3%A9+Bicycles/_/Sol%C3%A9+Fixtape+Vol.77" target="_blank"
+				<span
 					class="shadow-none mr-2 text-textContrast min-w-0"
 					>Solé Fixtape Volume 77
-				</a>
-				<span class="artist min-w-0">Solidad the Great</span>
+				</span>
+				<span class="text-text artist min-w-0">Solidad the Great</span>
 			</div>
 			<div class="mono text-14 text-textSubtle track--now-playing flex flex-row align-bottom" > 
 				Now Playing
@@ -19,4 +19,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</a>

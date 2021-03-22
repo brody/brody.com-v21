@@ -33,22 +33,22 @@ The course has been taken by more than 1.8 million students from 200 countries, 
 
 This is a collection of notes updated as I progress.
 
-# Week 1: What is Learning?
+## Week 1: What is Learning?
 
-## Brain Facts:
+### Brain Facts:
 
 - Cells of the nervous system are called neurons. Information from one neuron flows to another neuron across a synapse. Human brain has a million billion synapses.
 - Your brain creates synapses whenever you learn something new. Sleeping helps "update" your brain cells. Literally.
 
-## Why do we procrastinate (scientifically):
+### Why do we procrastinate (scientifically):
 
-### Problem:
+#### Problem:
 
 Learning a new thing or doing something you would rather not do can be stressing. This can cause anxiety at first. This activates the area associated with pain in the brain.
 
 Your brain looks for a way to stop that negative feeling by switching your attention to something else more pleasant.
 
-### Solution:
+#### Solution:
 
 The trick is to just start. Researchers discovered that not long after people start actually working out what they didn't like, that neuro-discomfort disappeared.
 
@@ -56,13 +56,13 @@ Remember that the better you get at something, the more enjoyable it can become.
 
 Consider using the pomodoro technique.
 
-## Learning hard and abstract things:
+### Learning hard and abstract things:
 
 The more abstract something is, the more important it is to practice to create and strengthen neural connections to bring the abstract ideas to reality for you.
 
 **Ex:** You should practice a lot with the math vocabulary to understand it and recall it easier. `[∫∞ex dx, k!(n-k)!]`
 
-## Summary of what I learnt:
+### Summary of what I learnt:
 
 1. There are two modes of thinking:
 
@@ -82,9 +82,9 @@ The more abstract something is, the more important it is to practice to create a
 
 5. It was shown that exercising and/or being in a rich social environment helps your brain produce new neurons. Don't lock yourself in your room. Stay active and spare time for exercise (including general physical activities) and friends daily.
 
-# Week 2: Chunking
+## Week 2: Chunking
 
-## Chunks:
+### Chunks:
 
 Pieces of information, neuroscientifically speaking, bond together through use and meaning. They can get bigger and more complex, but at the same time, they are single easy to access items that can fit into the slot of the working memory.
 
@@ -92,15 +92,15 @@ Pieces of information, neuroscientifically speaking, bond together through use a
 
 - **Example:** If you understand and practice a math formula. You no longer will need to focus much to solve it like you did the first time. That's because your "formula chunk" got so abstracted into your brain that it can only take one slot of your working memory to solve it.
 
-## Turn off distractions
+### Turn off distractions
 
 You want to use all the four slots of your working memory when studying. Learning will be inefficient if some of those slots are connected to something else.
 
-### You have to solve the problem yourself
+#### You have to solve the problem yourself
 
 Just because you see it, or even understand it, doesn't mean that you will be able to solve it (**Illusion of competence**). It is always easier to look at the material, even if you think it's easy, then doing it yourself.
 
-### It gets easier
+#### It gets easier
 
 When you think that a chapter or a book has too much information and that there's no way to go through them all; just focus on whatever section you're studying. You'll find that once you put that first concept in your mental library, the following one will be easier.
 
@@ -117,7 +117,7 @@ Don't always trust your initial intuition. Einstellung problem (a German word f
 
 Mix up the problems (Interleaving) from different chapters. This is helpful to create connections between your chunks. It can make your learning a bit more difficult, but it helps you learn more deeply. Interleaving is very important. It is where you leave the world of practice and repetition, and begin thinking more independently.
 
-### Don'ts:
+#### Don'ts:
 
 - Highlighting too much and creating maps are often ineffective without recalling.
 
@@ -125,9 +125,9 @@ Mix up the problems (Interleaving) from different chapters. This is helpful to 
 
 - A big mistake is to blindly start working on an exercise without reading the textbook or attending the class. This is a recipe of sinking. It's like randomly allowing a thought to pop off in the focus mode without paying attention to where the solution truly lies.
 
-# Week 3: Procrastination and Memory
+## Week 3: Procrastination and Memory
 
-## Procrastination:
+### Procrastination:
 
 - The routine, habitual responses your brain falls into when you try to do something hard or unpleasant. Focusing only on making the present moment feels better.
 
@@ -139,13 +139,13 @@ Mix up the problems (Interleaving) from different chapters. This is helpful to 
 
 - You want to avoid cramming which doesn't build solid neural structures, by putting the same amount into your learning, and spacing it over a long period by starting earlier.
 
-## First time learning something:
+### First time learning something:
 
 - The first time you do something the deluge of information coming at you would make the job seem almost impossibly difficult. But, once you've chunked it, it will be simple.
 
 - At first, it's really hard, later it's easy. It becomes like a habit. **Example:** Driving for the first time.
 
-## Habits:
+### Habits:
 
 - Neuro-scientifically speaking, chunking is related to habit.
 
@@ -153,7 +153,7 @@ Mix up the problems (Interleaving) from different chapters. This is helpful to 
 
 - Habits can be good or bad, brief or long.
 
-## Habits Parts:
+### Habits Parts:
 
 1.  **The cue:** The trigger that launches you into zombie mode (habitual routine).
 
@@ -187,7 +187,7 @@ Mix up the problems (Interleaving) from different chapters. This is helpful to 
 
     3. Trust your system. You have to feel happy and worry-free when you are resting.
 
-## Weekly/Daily list:
+### Weekly/Daily list:
 
 - Researchers showed that writing your daily list the evening before helps you accomplish them the next day. If you don't write them down, they will take the valuable slots of memory.
 
@@ -199,13 +199,13 @@ Mix up the problems (Interleaving) from different chapters. This is helpful to 
 
 - Have a backup plan for when you will still procrastinate.
 
-## Focus on Process:
+### Focus on Process:
 
 You should realize that it's perfectly normal to start a learning session with a negative feeling even if you like the subject. It's how you handle those feelings that matters.
 
 Solution: Focus on the process, not the product. The product is what triggers the pain that causes you to procrastinate. Instead of saying "I will solve this task today", put your best effort for a period of time continuously over the days
 
-## Memory:
+### Memory:
 
 - Use your visual memory to remember things.
 
@@ -236,9 +236,9 @@ Solution: Focus on the process, not the product. The product is what triggers th
 
 ---
 
-# Week 4: Renaissance Learning and Unlocking Your Potential
+## Week 4: Renaissance Learning and Unlocking Your Potential
 
-## You should know:
+### You should know:
 
 - Exercising is by far more effective than any drug to help you learn better. It helps new neurons survive.
 
@@ -246,13 +246,13 @@ Solution: Focus on the process, not the product. The product is what triggers th
 
 - You learn complex concepts by trying to make sense out of the information you perceive. Not by having someone else telling it to you.
 
-## Metaphors
+### Metaphors
 
 - Metaphors and analogies are very helpful, not only to memorize, but to also understand different concepts.
 
 - It is often helpful to pretend that you are the concept you're trying to understand.
 
-## Intelligence:
+### Intelligence:
 
 - Intelligence does matter. Being smart usually equate to having a large working memory (more than just four slots).
 
@@ -264,19 +264,19 @@ Solution: Focus on the process, not the product. The product is what triggers th
 
 - Take pride in the qualities you excel at. Tune people out if they try to demean your efforts.
 
-## Right hemisphere:
+### Right hemisphere:
 
 - Helps us put our work into the big picture perspective and does reality checks.
 
 - When you go through a homework or test questions and don't go back to check your work, you're acting like a person who's refusing to use parts of his brain.
 
-## Left hemisphere:
+### Left hemisphere:
 
 - Interprets the world for us but with a tendency for rigidity, dogmatism and egocentricity.
 
 - May lead to overconfidence. Example: believing dismissively that your answers are corrects.
 
-## Best practices:
+### Best practices:
 
 - Always step back and recheck to takes advantages of abilities of both-hemispheres interactions.
 
@@ -290,7 +290,7 @@ Solution: Focus on the process, not the product. The product is what triggers th
 
 - Don't fool yourself. Don't blindly believe in your intellectual abilities. Having a team can bring those projections down.
 
-## Test Checklist:
+### Test Checklist:
 
 - Did you make a serious effort to understand the text? If you had a study guide, did you go through it?
 
@@ -306,9 +306,9 @@ Solution: Focus on the process, not the product. The product is what triggers th
 
 ---
 
-# Test Taking Technique:
+## Test Taking Technique:
 
-## Hard Start - Jump to easy: (Try this strategy with homework problems first)
+### Hard Start - Jump to easy: (Try this strategy with homework problems first)
 
 1.  Take a quick look at the test when it's handed to you to get a sense of what it involves.
 
@@ -316,7 +316,7 @@ Solution: Focus on the process, not the product. The product is what triggers th
 
 3.  Turn next to an easy problem. Solves what you can, then move back to a hard one. *This allows the different part of your brain to work simultaneously on different thoughts.*
 
-## Taking Test Tips:
+### Taking Test Tips:
 
 - Being Stressed before a test is normal. The body puts ups out chemicals when it's under stress. How you interpret the body reaction to those chemicals makes all the difference.
 
