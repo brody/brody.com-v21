@@ -6,9 +6,12 @@
 
 @font-face {
 	font-family: "Recursive";
-	src: url("/static/fonts/Recursive_VF_1.074.woff2") format("woff2-variations");
+	/* src: url("/static/fonts/Recursive_VF_1.074.woff2") format("woff2-variations"); */
+	src: url("/static/fonts/Recursive_VF_1.074--subset-GF_latin_basic.woff2")
+		format("woff2-variations");
 	font-weight: 300 1000;
 	font-style: oblique 0deg 14deg;
+	font-display: swap;
 }
 
 :root {
@@ -19,7 +22,7 @@
 	--color-bg-offset: #0c162d;
 	--color-bg-contrast: #1a263d;
 	--color-bg-contrast-90: rgba(26, 38, 61, 0.9);
-	--color-primary: #3bf0e4;
+	--color-priitmary: #3bf0e4;
 	--color-primary-offset: #1cbdb2;
 	--color-secondary: #ffe57f;
 	--color-gradient: 94deg, #3bf0e4, #bca1f7, #ff7170, #f49267, #ffe532;
