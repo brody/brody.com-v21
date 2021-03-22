@@ -33,7 +33,9 @@ Joel perfectly defines an anxiety common to Product Designers, but also outlines
 >
 > So… what do I choose? Full Stack Anxiety is that creeping doubt, when you just don’t know what the right choice is. Do I grow as a designer or do I grow as a developer? As a manager, a teacher, a business-person?
 
+<div class="aspect-w-16 aspect-h-9 my-5">
 <iframe width="560" height="365" src="https://www.youtube.com/embed/VBK6WDOOg2I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 ## 1\. Ask yourself
 

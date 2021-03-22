@@ -6,6 +6,7 @@ const markdownIt = require("markdown-it");
 const Image = require("@11ty/eleventy-img");
 const svgContents = require("eleventy-plugin-svg-contents");
 const fs = require("fs");
+const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
 
 async function imageShortcode(src, alt, sizes) {
 	let metadata = await Image(src, {
@@ -19,9 +20,9 @@ async function imageShortcode(src, alt, sizes) {
 		loading: "lazy",
 		decoding: "async",
 	};
-
-	// You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-	return Image.generateHTML(metadata, imageAttributes);
+	return Image.generateHTML(metadata, imageAttributes, {
+		whitespaceMode: "inline",
+	});
 }
 
 module.exports = function (eleventyConfig) {
@@ -30,11 +31,12 @@ module.exports = function (eleventyConfig) {
 		templateFormats: ["njk", "md"],
 	});
 	eleventyConfig.addPlugin(svgContents);
+	eleventyConfig.addPlugin(lazyImagesPlugin);
 
 	// eleventy-img shortcodes
-	// eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-	// eleventyConfig.addLiquidShortcode("image", imageShortcode);
-	// eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+	eleventyConfig.addLiquidShortcode("image", imageShortcode);
+	eleventyConfig.addJavaScriptFunction("image", imageShortcode);
 
 	eleventyConfig.addNunjucksAsyncShortcode("image", async (src, alt) => {
 		if (!alt) {
