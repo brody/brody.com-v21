@@ -20,7 +20,8 @@ layout: base.njk
     {{ content | safe }}
   </div> #}
 
-<div class="entry lg:relative mb-20 md:mb-32 lg:mb-40">
+<section id="main" class="lg:relative mb-20 md:mb-32 lg:mb-40">
+
   <time data-date="{{ page.date }}" datetime="{{ page.date | htmlDateString }}" class="mono text-12 text-textSubtle mb-3 inline-block lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">{{ page.date | prettyDate }}
   </time>
 
@@ -39,7 +40,7 @@ layout: base.njk
     {% endif %}
   </h1>
   {% if featured_image %}
-    <figure class="my-5">
+    <figure class="mt-6 mb-5">
       <img src="{{ featured_image }}" alt="{% if figcaption %}{{ title }}{% else %}{{ title }}{% endif %}">
       {% if figcaption %}
         <figcaption>
@@ -64,5 +65,5 @@ layout: base.njk
     </ul>
 
   </div>
-</div>
+</section>
 {# </article> #}

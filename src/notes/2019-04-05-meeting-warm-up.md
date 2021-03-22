@@ -4,22 +4,11 @@ date: 2019-04-05 00:00:00
 published: true
 slug: meeting-warm-up
 description: Heading to a meeting, I've started running short games to help break the ice and get the creative juices flowing.
-cover-image: /notes/assets/meeting-warm-up/cover.png
+featured_image: /notes/assets/meeting-warm-up/cover.png
 og-image: /notes/assets/meeting-warm-up/og.png
 tags:
   - Design
   - Culture
-
-source-title:
-source-url:
-source-url-label:
-
-book-title:
-book-author:
-book-url:
-book-url-label:
-book-cover:
-book-rating:
 ---
 
 Recently, I've been running a game of Pictionary, before our designer catch-up meetings, to break the ice and get the creative juices flowing.
@@ -37,8 +26,6 @@ You only need a few things to run one yourself, with both local and remote team 
 
 - iPad with Apple Pencil & corresponding Whiteboard app
 
-~~
-
 ## Recipe
 
 1. Pick team members of 2 at random.
@@ -52,10 +39,6 @@ You only need a few things to run one yourself, with both local and remote team 
 
 Enjoy! 👍
 
-<br>
-
 ![Warm-up Sketch](/notes/assets/meeting-warm-up/sketches.png)
-
-<br>
 
 ![Warm-up Sketch](/notes/assets/meeting-warm-up/sketches2.png)

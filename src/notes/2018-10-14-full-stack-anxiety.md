@@ -41,6 +41,8 @@ Joel perfectly defines an anxiety common to Product Designers, but also outlines
 
 “What kind of work do I want to do in the future?” And, when approaching a new skill ask, “What am I becoming by learning this?” If that skill doesn’t help you become the person you want to be, then it may not be worth your attention.
 
+~~
+
 ## 2\. Create some structure.
 
 Remember that big, scary list that Califa presented? Make one for yourself.

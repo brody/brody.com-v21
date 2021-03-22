@@ -2,7 +2,7 @@
 layout: base.njk
 pagination:
     data: collections.notes
-    size: 10
+    size: 5
     reverse: true
 ---
 
@@ -40,7 +40,7 @@ pagination:
                 </a>
             </h1>
             {% if entry.data.featured_image %}
-                <figure class="my-5">
+                <figure class="mt-6 mb-5">
                     <img src="{{ entry.data.featured_image }}" alt="{% if entry.data.figcaption %}{{ entry.data.title }}{% else %}{{ entry.data.title }}{% endif %}">
                     {% if entry.data.figcaption %}
                         <figcaption>

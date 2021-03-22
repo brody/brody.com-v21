@@ -29,8 +29,6 @@ After having heard this course recommended for so long, I finally started it.
 
 The course has been taken by more than 1.8 million students from 200 countries, the most ever on Coursera.
 
-~~
-
 This is a collection of notes updated as I progress.
 
 ## Week 1: What is Learning?
@@ -39,6 +37,8 @@ This is a collection of notes updated as I progress.
 
 - Cells of the nervous system are called neurons. Information from one neuron flows to another neuron across a synapse. Human brain has a million billion synapses.
 - Your brain creates synapses whenever you learn something new. Sleeping helps "update" your brain cells. Literally.
+
+~~
 
 ### Why do we procrastinate (scientifically):
 

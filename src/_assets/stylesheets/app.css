@@ -22,7 +22,7 @@
 	--color-bg-offset: #0c162d;
 	--color-bg-contrast: #1a263d;
 	--color-bg-contrast-90: rgba(26, 38, 61, 0.9);
-	--color-priitmary: #3bf0e4;
+	--color-primary: #3bf0e4;
 	--color-primary-offset: #1cbdb2;
 	--color-secondary: #ffe57f;
 	--color-gradient: 94deg, #3bf0e4, #bca1f7, #ff7170, #f49267, #ffe532;
@@ -65,7 +65,7 @@ main a {
 }
 
 main a:hover {
-	@apply text-primaryOffset border-b border-textSubtle;
+	@apply text-primaryOffset border-b border-primaryOffset;
 }
 
 footer a {
@@ -93,7 +93,7 @@ img {
 }
 
 .title {
-	@apply leading-tight mt-0;
+	@apply leading-tight mt-0 mb-2;
 	--mono: "MONO" 0;
 	--casl: "CASL" 1;
 	--wght: "wght" 728;
@@ -105,7 +105,7 @@ img {
 	@apply leading-snug text-textSubtle mt-2 mb-4;
 	--mono: "MONO" 0;
 	--casl: "CASL" 1;
-	--wght: "wght" 382;
+	--wght: "wght" 412;
 	--slnt: "slnt"-12;
 	font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
 		var(--CRSV);
