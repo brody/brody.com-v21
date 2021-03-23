@@ -24,7 +24,7 @@ As part of my job at Cloudbees, I have been working on creating our Design Syste
 > 4.  Has a point of view and a sense of prioritization that a rational person could disagree with.
 > 5.  Is generally paired with illustrative examples that show how the principle applies to specific decisions.”
 >
-> <cite>— [Julie Zhuo](https://medium.com/the-year-of-the-looking-glass/a-matter-of-principle-4f5e6ad076bb), VP of Design at Facebook</cite>
+> <cite>— [Julie Zhuo](https://medium.com/the-year-of-the-looking-glass/a-matter-of-principle-4f5e6ad076bb), VP of Design at Facebook</cite> { #excerpt }
 
 ~~
 

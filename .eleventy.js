@@ -113,11 +113,19 @@ module.exports = function (eleventyConfig) {
 			html: true,
 			breaks: true,
 			linkify: true,
-		}).use(require("markdown-it-prism"))
+		})
+			.use(require("markdown-it-prism"))
+			.use(require("markdown-it-attrs"))
 	);
-
 	eleventyConfig.addFilter("md", function (content = "") {
-		return markdownIt({ html: true }).render(content);
+		return markdownIt({
+			html: true,
+			breaks: true,
+			linkify: true,
+		})
+			.use(require("markdown-it-prism"))
+			.use(require("markdown-it-attrs"))
+			.render(content);
 	});
 
 	eleventyConfig.setBrowserSyncConfig({

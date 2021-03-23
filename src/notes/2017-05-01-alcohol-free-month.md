@@ -24,7 +24,7 @@ Even at the best of times, I'm a horrible sleeper, but having [a couple under th
 
 ### Morning workouts are no longer a struggle
 
-Who doesn't love the great all-day feeling gained after getting a work out or run done the morning? But even after 1 or 2 the night before, getting out of bed, especially in Winter, is that much harder.
+Who doesn't love the great all-day feeling gained after getting a work out or run done the morning? But even after 1 or 2 the night before, getting out of bed, especially in Winter, is that much harder. { #excerpt }
 
 ~~
 

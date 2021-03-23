@@ -30,7 +30,7 @@ book-rating: 4-5
 2. The greatest danger in times of turbulence is not the turbulence. It is to act with yesterday’s logic.
 3. Seeing is not believing, believing is seeing. You see things, not as they are, but as you are.
 4. Humanity evolves in stages. We are not like a tree that grows consistently, but like a caterpillar that becomes a butterfly.
-5. Ever more people today have the means to live, but no meaning to live for.
+5. Ever more people today have the means to live, but no meaning to live for. { #excerpt }
    ~~
 6. Every challenge you encounter in life is a fork in the road. You have the choice to choose which way to go — backward, forward, breakdown or breakthrough.
 7. The most existing breakthroughs of the 21st century will not occur because of technology, but because of expanding concept of what it means to be human. (John Naisbitt)

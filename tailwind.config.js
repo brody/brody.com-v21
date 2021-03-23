@@ -24,7 +24,7 @@ module.exports = {
 				bg: "var(--color-bg)",
 				bgOffset: "var(--color-bg-offset)",
 				bgContrast: "var(--color-bg-contrast)",
-				bgContrast90: "var(--color-bg-contrast-90)",
+				bgContrast80: "var(--color-bg-contrast-80)",
 				primary: "var(--color-primary)",
 				primaryOffset: "var(--color-primary-offset)",
 				secondary: "var(--color-secondary)",

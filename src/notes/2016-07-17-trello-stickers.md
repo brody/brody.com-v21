@@ -12,7 +12,7 @@ description: Jazz up your Trello board with these Sticker Sets
 
 Stickers are a fun, visual indicators & are a way to give feedback on Trello cards.
 
-[Trello Gold & Business Class](https://trello.com/brodymaclean/recommend) gives you the ability to upload custom stickers and here are 2 sticker sets for you and your team to use.
+[Trello Gold & Business Class](https://trello.com/brodymaclean/recommend) gives you the ability to upload custom stickers and here are 2 sticker sets for you and your team to use. { #excerpt }
 
 ~~
 

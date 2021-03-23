@@ -21,7 +21,7 @@
 	--color-bg: #040d21;
 	--color-bg-offset: #0c162d;
 	--color-bg-contrast: #1a263d;
-	--color-bg-contrast-90: rgba(26, 38, 61, 0.9);
+	--color-bg-contrast-80: rgba(26, 38, 61, 0.8);
 	--color-primary: #3bf0e4;
 	--color-primary-offset: #1cbdb2;
 	--color-secondary: #ffe57f;
@@ -31,6 +31,10 @@
 	--wght: "wght" 382; /* Weight: Light to ExtraBlack; usually set with `font-weight` */
 	--slnt: "slnt"-1; /* Slant: 0 to -15 degrees, auto cursive at -14 */
 	--CRSV: "CRSV" 0.5; /* Cursive: always roman, auto substitution, or always cursive */
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 ::selection {
@@ -172,6 +176,38 @@ h4 + p {
 	@apply mt-3;
 }
 
+@-webkit-keyframes bounce {
+	0%,
+	100% {
+		-webkit-transform: translateX(0);
+	}
+	50% {
+		-webkit-transform: translateX(-5px);
+	}
+}
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-5px);
+	}
+}
+
+#note #excerpt {
+	@apply pt-24 -mt-24 relative;
+	&::before {
+		@apply absolute top-24 -left-6 text-20 text-primary -mt-0.5;
+		content: "→";
+		-webkit-animation: bounce 2s infinite ease-in-out;
+		-o-animation: bounce 2s infinite ease-in-out;
+		-ms-animation: bounce 2s infinite ease-in-out;
+		-moz-animation: bounce 2s infinite ease-in-out;
+		animation: bounce 2s infinite ease-in-out;
+	}
+}
+
 @screen md {
 	:is(h3, h4, h5) {
 		@apply leading-snug;
@@ -204,6 +240,12 @@ h4 + p {
 	h4 + p {
 		@apply mt-4;
 	}
+	#note #excerpt {
+		@apply pt-40 -mt-40;
+		&::before {
+			@apply top-40 -left-8;
+		}
+	}
 }
 
 @screen lg {
@@ -224,6 +266,12 @@ h4 + p {
 
 	h1 + h3 {
 		@apply leading-snug mt-5 mb-4;
+	}
+	#note #excerpt {
+		@apply pt-48 -mt-48;
+		&::before {
+			@apply top-48 -left-10;
+		}
 	}
 }
 
@@ -288,7 +336,7 @@ p mark {
 .gradient {
 	background: linear-gradient(var(--color-gradient));
 	background-size: 200% 200%;
-	animation: gradient 3s ease infinite !important;
+	animation: gradient 2s ease infinite !important;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-webkit-transition: color 0.2s ease-out;

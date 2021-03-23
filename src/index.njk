@@ -53,7 +53,7 @@ pagination:
                 {% if entry.data.page.excerpt %}
                     {{ entry.data.page.excerpt | md | safe }}
                     <div class="w-full h-24 absolute bottom-0 left-0 right-0 flex flex-col justify-end items-center bg-gradient-to-t from-bg to-transparent">
-                        <a class="bg-bgContrast py-2 px-5 border-none rounded-full" href="{{ entry.url }}">Continue reading →</a>
+                        <a class="bg-bgContrast border hover:border-bgContrast hover:bg-bgOffset py-2 px-5 rounded-full" href="{{ entry.url }}#excerpt">Continue reading →</a>
                     </div>
                 {% else %}
                     {{ entry.templateContent | safe }}
@@ -74,5 +74,9 @@ pagination:
             </div>
         </div>
     {% endfor %}
+
+    <div class="w-full flex justify-center items-center mb-16 md:mb-24 lg:mb-32">
+        <a class="bg-bgContrast border hover:border-bgContrast hover:bg-bgOffset text-18 py-2 px-6 rounded-full" href="/notes/#note-6">Read more →</a>
+    </div>
 
 </section>

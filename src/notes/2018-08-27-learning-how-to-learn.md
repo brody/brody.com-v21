@@ -36,7 +36,7 @@ This is a collection of notes updated as I progress.
 ### Brain Facts:
 
 - Cells of the nervous system are called neurons. Information from one neuron flows to another neuron across a synapse. Human brain has a million billion synapses.
-- Your brain creates synapses whenever you learn something new. Sleeping helps "update" your brain cells. Literally.
+- Your brain creates synapses whenever you learn something new. Sleeping helps "update" your brain cells. Literally. { #excerpt }
 
 ~~
 

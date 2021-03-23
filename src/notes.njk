@@ -43,7 +43,7 @@ pagination:
 
     {% for entry in items %}
 
-        <div id="note-{{ loop.index }}" class="entry relative mb-20 md:mb-32 lg:mb-40">
+        <div id="note-{{ loop.index }}" class="pt-20 -mt-20 md:pt-32 md:-mt-32 lg:pt-40 lg:-mt-40 entry relative mb-20 md:mb-32 lg:mb-40">
             <time data-date="{{ entry.date }}" datetime="{{ entry.date | htmlDateString }}" class="mono text-12 text-textSubtle mb-2 inline-block lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">{{ entry.date | prettyDate }}
             </time>
 
@@ -68,9 +68,12 @@ pagination:
                     {% endif %}
                 </figure>
             {% endif %}
-            <article>
+            <article class="relative">
                 {% if entry.data.page.excerpt %}
                     {{ entry.data.page.excerpt | md | safe }}
+                    <div class="w-full h-24 absolute bottom-0 left-0 right-0 flex flex-col justify-end items-center bg-gradient-to-t from-bg to-transparent">
+                        <a class="bg-bgContrast border hover:border-bgContrast hover:bg-bgOffset py-2 px-5 rounded-full" href="{{ entry.url }}#excerpt">Continue reading →</a>
+                    </div>
                 {% else %}
                     {{ entry.templateContent | safe }}
                 {% endif %}
@@ -84,9 +87,9 @@ pagination:
                     {% endfor %}
 
                 </ul>
-                {% if entry.data.page.excerpt %}
+                {# {% if entry.data.page.excerpt %}
                     <a class="" href="{{ entry.url }}">Continue reading →</a>
-                {% endif %}
+                {% endif %} #}
             </div>
         </div>
     {% endfor %}
