@@ -6,8 +6,8 @@ slug: 2021-redesign
 description: Another year, another redesign of Brody.com to give me the chance to iterate upon the design, improve my front-end skillz and try out a shiny new tool or two.
 og-image:
 tags:
-  - Design
-  - Development
+  - design
+  - development
 ---
 
 Another year, another redesign of Brody.com to give me the chance to iterate upon the design, improve my front-end skillz and try out a shiny new tool or two.
