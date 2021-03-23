@@ -27,7 +27,7 @@ layout: base.njk
 
   <h1 class="title text-24 md:text-28 lg:text-32 text-textContrast mb-5">
     {% if link %}
-      <a href="{{ link }}" {% if link %}target="_blank"{% endif %}>
+      <a href="{{ link }}" {% if link %}target="_blank" rel="noopener"{% endif %}>
         {{ title }}
         <svg class="inline-block h-5 md:h-6 fill-current text-textSubtle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"

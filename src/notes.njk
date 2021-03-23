@@ -12,7 +12,7 @@ pagination:
 {# <main class="">
     <div class="container">
         <h1 class="title">{{ title }}</h1>
-        <h3 class="subtitle">Personal notes and snippets of code.</h3>
+        <h2 class="subtitle">Personal notes and snippets of code.</h2>
 
         <ul>
             {% set items = pagination.items %}
@@ -32,12 +32,8 @@ pagination:
 
 <section id="intro" class="mb-20 md:mb-32 lg:mb-40">
 
-    <h1 class="title">
-        {{ title }}
-    </h1>
-    <h3 class="subtitle">
-        {{ description }}
-    </h3>
+    <h1 class="title">{{ title }}</h1>
+    <h2 class="subtitle">{{ description }}</h2>
 
 </section>
 
@@ -47,12 +43,12 @@ pagination:
 
     {% for entry in items %}
 
-        <div class="entry relative mb-20 md:mb-32 lg:mb-40">
+        <div id="note-{{ loop.index }}" class="entry relative mb-20 md:mb-32 lg:mb-40">
             <time data-date="{{ entry.date }}" datetime="{{ entry.date | htmlDateString }}" class="mono text-12 text-textSubtle mb-2 inline-block lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">{{ entry.date | prettyDate }}
             </time>
 
             <h1 class="title text-24 md:text-28 lg:text-32 text-textContrast mb-5">
-                <a href="{% if entry.data.link %}{{ entry.data.link }}{% else %}{{ entry.url }}{% endif %}" {% if entry.data.link %}target="_blank"{% endif %}>
+                <a href="{% if entry.data.link %}{{ entry.data.link }}{% else %}{{ entry.url }}{% endif %}" {% if entry.data.link %}target="_blank" rel="noopener"{% endif %}>
                     {{ entry.data.title }}
                     {% if entry.data.link %}
                         <svg class="inline-block h-5 md:h-6 fill-current text-textSubtle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">

@@ -6,7 +6,7 @@ tags:
   - Book
   - Culture
 slug: reinventing-organizations
-cover-image: /notes/assets/reinventing-organizations/cover.jpg
+featured_image: /notes/assets/reinventing-organizations/cover.jpg
 og-image: /notes/assets/reinventing-organizations/cover.jpg
 description: The book that has inspired organizations to take a radical leap and adopt a whole different set of management principles and practices.
 
@@ -52,5 +52,5 @@ book-rating: 4-5
 # Talk and Q&A by Frédéric Laloux
 
 <div class="aspect-w-16 aspect-h-9 my-5">
-<iframe src="https://www.youtube.com/embed/gcS04BI2sbk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<iframe title="Talk and Q&A by Frédéric Laloux" src="https://www.youtube.com/embed/gcS04BI2sbk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 </div>
