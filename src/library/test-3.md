@@ -1,10 +1,10 @@
 ---
-date:
-title: "In prog"
-progress: 65
+date: 2222-22-22
+title: "The Guest List by Lyc Foley"
+progress: 23
 repeat:
 artwork:
-released: 2024
-type: course
+released: 2020
+type: book
 rating:
 ---

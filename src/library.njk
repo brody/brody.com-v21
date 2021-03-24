@@ -39,15 +39,17 @@ pagination:
         {% set items = pagination.items %}
 
         {% for entry in items %}
-            {# {% if entry.data.progress %}
+            {% if entry.data.progress %}
                 {% if inProgress != true %}
                     <h3 class="text-textContrast mt-12 mb-2">In progress</h3>
-                    {% set currentMonth == true %}
+                    <hr class="border-bgContrast mt-0 mb-5">
+                    {% set inProgress = true %}
                 {% endif %}
 
-            {% endif %} #}
+            {% endif %}
 
-            {% if entry.date %}
+            {% if entry.date
+            and not entry.data.progress %}
 
                 {% set entryYear = entry
                     .date
@@ -70,7 +72,12 @@ pagination:
             {% endif %}
 
             <div class="flex mb-4">
-                <div class="flex-shrink mono mr-4">{{ entry.date | dayDate }}</div>
+                {% if entry.data.progress %}
+                    <div class="flex-shrink mono mr-4"> — </div>
+                {% else %}
+                    <div class="flex-shrink mono mr-4">{{ entry.date | dayDate }}</div>
+                {% endif %}
+
                 <div class="flex-1 flex flex-row">
                     {% if (entry.data.artwork) and (entry.data.rating == 5) %}
                         <div class="flex-shrink w-14 mr-4">
@@ -83,7 +90,13 @@ pagination:
                             <span class="inline-block">{{ entry.data.released }}
                                 {{ entry.data.type }}</span>
                         </div>
-                        <div class="md:flex-shrink">{{ entry.data.rating }}</div>
+                        {% if entry.data.progress %}
+                            <progress class="bg-transparent text-text h-2 w-20 border border-textSubtle rounded-full overflow-hidden                            " max="100" value="{{ entry.data.progress }}">
+                                {{ entry.data.progress }}
+                            </progress>
+                        {% else %}
+                            <div class="md:flex-shrink">{{ entry.data.rating }}</div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
