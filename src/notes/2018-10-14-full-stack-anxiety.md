@@ -37,9 +37,9 @@ Joel perfectly defines an anxiety common to Product Designers, but also outlines
 <iframe title="Full Stack Anxiety - Joel Califa" width="560" height="365" src="https://www.youtube.com/embed/VBK6WDOOg2I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-## 1\. Ask yourself
+## 1\. Ask yourself { #excerpt }
 
-“What kind of work do I want to do in the future?” And, when approaching a new skill ask, “What am I becoming by learning this?” If that skill doesn’t help you become the person you want to be, then it may not be worth your attention. { #excerpt }
+“What kind of work do I want to do in the future?” And, when approaching a new skill ask, “What am I becoming by learning this?” If that skill doesn’t help you become the person you want to be, then it may not be worth your attention.
 
 ~~
 
@@ -55,9 +55,12 @@ A bit of organization — even a simple list on paper — eliminates the
 
 Califa suggests creating a simple if/then statement.
 
-- If this skill can be applicable to other parts of my life. Then I’ll learn it.
-- If this is a skill that’ll be in demand for years to come. Then I’ll learn it.
-- If this brings me closer to who I want to be. Then I’ll learn it.
+- _If_ this skill can be applicable to other parts of my life.
+  _Then_ I’ll learn it.
+- If this is a skill that’ll be in demand for years to come.
+  Then I’ll learn it.
+- If this brings me closer to who I want to be.
+  Then I’ll learn it.
 
 Hopefully, this helps reduce that overwhelming list to something more approachable.
 

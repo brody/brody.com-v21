@@ -41,6 +41,11 @@ html {
 	@apply bg-primaryOffset text-bg;
 }
 
+::before,
+::after {
+	@apply font-var;
+}
+
 :focus,
 button:focus {
 	outline: solid 3px rgba(0, 0, 0, 0.05);
@@ -195,7 +200,7 @@ h4 + p {
 	}
 }
 
-#note #excerpt {
+#note #excerpt:target {
 	@apply pt-24 -mt-24 relative;
 	&::before {
 		@apply absolute top-24 -left-6 text-20 text-primary -mt-0.5;
@@ -240,7 +245,7 @@ h4 + p {
 	h4 + p {
 		@apply mt-4;
 	}
-	#note #excerpt {
+	#note #excerpt:target {
 		@apply pt-40 -mt-40;
 		&::before {
 			@apply top-40 -left-8;
@@ -267,7 +272,7 @@ h4 + p {
 	h1 + h3 {
 		@apply leading-snug mt-5 mb-4;
 	}
-	#note #excerpt {
+	#note #excerpt:target {
 		@apply pt-48 -mt-48;
 		&::before {
 			@apply top-48 -left-10;

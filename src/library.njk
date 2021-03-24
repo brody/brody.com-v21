@@ -2,169 +2,110 @@
 layout: base.njk
 title: Library
 description: A running log of all the films, TV shows, video games, and books I’ve been spending time with.
+
+pagination:
+  data: collections.library
+  size: 20
+  reverse: true
 ---
 
 <section id="intro" class="mb-20 md:mb-32 lg:mb-40">
 
     <h1 class="title">{{ title }}</h1>
-    <h2 class="subtitle">{{ description }}</h2>
+    <h2 class="subtitle text-18">{{ description }}</h2>
 
 </section>
 
 <section id="main">
 
-    <section>
-        <h3>In progress</h3>
-        <hr class="border-bgContrast">
+    <div class="flex flex-col -mt-24">
+        {% set currentYear = "" %}
+        {% set currentMonth = "" %}
+        {% set inProgress = "" %}
+        {% set months = [
+            "January",
+            "Feburary",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ] %}
+        {% set items = pagination.items %}
 
-    </section>
+        {% for entry in items %}
+            {# {% if entry.data.progress %}
+                {% if inProgress != true %}
+                    <h3 class="text-textContrast mt-12 mb-2">In progress</h3>
+                    {% set currentMonth == true %}
+                {% endif %}
 
-    <div class="entry relative mb-20 md:mb-32 lg:mb-40">
+            {% endif %} #}
 
-        <h1 class="text-24 md:text-28 lg:text-32 text-textContrast mb-5">
-            <a href="#">Approach film leg market movement hit's hard
-                home </a>
-        </h1>
-        <figure class="my-5">
-            <img src="https://placekeanu.com/300/250" alt="">
-            <figcaption class="text-12 text-textSubtle text-center mt-2">Chance political interesting I remember.
-            </figcaption>
-        </figure>
-        <p>It is in our nature to be anthropocentric — to believe that everything revolves around human beings and our
-            needs. </p>
-        <p>
-            When we consider what sets us apart, we think of things like culture and traditions, the importance of
-            family, a sense of self, and <a href="#">the ability</a> to reason and introspect. We consider that our
-            large brains grant us a position of superiority.</p>
-        <aside
-            class="mono casual hidden text-12 text-textSubtle mb-3 lg:inline-block lg:absolute lg:right-0 lg:w-40 xl:w-56 lg:-mr-48 xl:-mr-64 lg:text-left">
-            First be tax chance collection chair. Go lot check natural. None imagine address.</aside>
-        <p>
-            I assume it would bother people who think this way to learn that we are far from unique in these respects.
-            In fact, I hope to bother them today with a brief discussion of one of the animal kingdom’s most
-            intelligent, mysterious, and impressive denizens: the sperm whale.</p>
-        <div class="flex flex-row w-full justify-between">
-            <ul class="tags flex flex-row">
-                <li class="tag">
-                    <a href="#">design</a>
-                </li>
-                <li class="tag">
-                    <a href="#">dev</a>
-                </li>
-            </ul>
-            <a class="" href="#">Read more →</a>
-        </div>
-    </div>
+            {% if entry.date %}
 
-    <div class="entry relative mb-20 md:mb-32 lg:mb-40">
-        <div class="mono text-12 text-textSubtle mb-3 lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">March 08,
-            2020
-        </div>
-        <h1 class="text-24 md:text-28 lg:text-32 text-textContrast mb-5">
-            <a href="#">Asian Jim knows Jim's password therefore must be Jim. Classic!
-                <svg class="inline-block h-5 md:h-6 fill-current text-textSubtle" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M10.604 1h4.14 -.01c.13-.01.25.11.25.24v4.14l-.01-.01c0 .13-.12.25-.25.25 -.07 0-.14-.03-.18-.08l-1.55-1.55 -3.75 3.75 0-.001c-.31.28-.78.26-1.06-.04 -.27-.29-.27-.74-.001-1.03l3.75-3.75 -1.55-1.55 -.01-.01c-.1-.1-.1-.26-.01-.36 .04-.05.11-.08.17-.08ZM3.74 2l-.01 0c-.97 0-1.75.78-1.75 1.75v8.5c0 .96.78 1.75 1.75 1.75h8.5l-.01-.001c.96 0 1.75-.79 1.75-1.75 0-.01 0-.01 0-.01v-3.5 0c0-.42-.34-.75-.75-.75 -.42 0-.75.33-.75.75v3.5 0c0 .13-.12.25-.25.25h-8.5 -.01c-.14-.01-.25-.12-.25-.26v-8.5l0 0c-.01-.14.11-.26.24-.26h3.5l-.01-.001c.41 0 .75-.34.75-.75 0-.42-.34-.75-.75-.75h-3.5Z"/>
-                </svg>
-            </a>
-        </h1>
-        <iframe title="Asian Jim knows Jim's password therefore must be Jim" width="560" height="315" src="https://www.youtube-nocookie.com/embed/cLNyF1Zw5tg?controls=0"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        <p>It is in our nature to be anthropocentric — to believe that everything revolves around human beings and our
-            needs. </p>
+                {% set entryYear = entry
+                    .date
+                    .getFullYear() %}
+                {% set entryMonth = entry
+                    .date
+                    .getMonth() %}
 
-        <div class="flex flex-row w-full justify-between">
-            <ul class="tags flex flex-row">
-                <li class="tag">
-                    <a href="#">life</a>
-                </li>
+                {% if currentYear != entryYear %}
+                    {% set currentYear = entryYear %}
+                    <h2 class="text-text mt-20 mb-0">{{ entryYear }}</h2>
+                {% endif %}
 
-            </ul>
-            {# <a class="" href="#">Read more →</a> #}
-        </div>
-    </div>
+                {% if currentMonth != entryMonth %}
+                    {% set currentMonth = entryMonth %}
+                    <h3 class="text-textContrast mt-12 mb-2">{{ months[entryMonth] }}
+                        {{ entryYear }}</h3>
+                    <hr class="border-bgContrast mt-0 mb-5">
+                {% endif %}
+            {% endif %}
 
-    <div class="entry relative mb-20 md:mb-32 lg:mb-40">
-        <div class="mono text-12 text-textSubtle mb-3 lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">March 08,
-            2020
-        </div>
-        <h1 class="text-24 md:text-28 lg:text-32 text-textContrast mb-5">
-            <a href="#">South compare live probably leader life have
-                president</a>
-        </h1>
-        <figure class="my-5">
-            <img src="https://placeimg.com/1000/580/animals" alt="">
-            <figcaption class="text-12 text-textSubtle text-center mt-2">Excepturi iure quae recusandae a quam officia
-                voluptate.
-            </figcaption>
-        </figure>
-        <p>It is in our nature to be anthropocentric — to believe that everything revolves around human beings and our
-            needs. </p>
-        <p>
-            When we consider what sets us apart, we think of things like culture and traditions, the importance of
-            family, a sense of self, and <a href="#">the ability</a> to reason and introspect. We consider that our
-            large brains grant us a position of superiority.</p>
-        <aside
-            class="mono casual hidden text-12 text-textSubtle mb-3 lg:inline-block lg:absolute lg:right-0 lg:w-40 xl:w-56 lg:-mr-48 xl:-mr-64 lg:text-left">
-            First be tax chance collection chair. <a href="#">Record somebody just capital.</a> Go lot check natural.
-            None imagine address.</aside>
-        <p>
-            I assume it would bother people who think this way to learn that we are far from unique in these respects.
-            In fact, I hope to bother them today with a brief discussion of one of the animal kingdom’s most
-            intelligent, mysterious, and impressive denizens: the sperm whale.</p>
-        <div class="flex flex-row w-full justify-between">
-            <ul class="tags flex flex-row">
-                <li class="tag">
-                    <a href="#">life</a>
-                </li>
+            <div class="flex mb-4">
+                <div class="flex-shrink mono mr-4">{{ entry.date | dayDate }}</div>
+                <div class="flex-1 flex flex-row">
+                    {% if (entry.data.artwork) and (entry.data.rating == 5) %}
+                        <div class="flex-shrink w-14 mr-4">
+                            <img src="{{ entry.data.artwork }}" class="rounded-sm" alt="{{ entry.data.title }}" srcset="">
+                        </div>
+                    {% endif %}
+                    <div class="flex-1 flex flex-col md:flex-row">
+                        <div class="md:flex-1 mb-1 md:mb-0 md:mr-3">
+                            <span class="mr-2 text-textContrast" >{{ entry.data.title }}</span>
+                            <span class="inline-block">{{ entry.data.released }}
+                                {{ entry.data.type }}</span>
+                        </div>
+                        <div class="md:flex-shrink">{{ entry.data.rating }}</div>
+                    </div>
+                </div>
+            </div>
 
-            </ul>
-            <a class="" href="#">Read more →</a>
-        </div>
-    </div>
-
-    <div class="entry relative mb-20 md:mb-32 lg:mb-40">
-        <div class="mono text-12 text-textSubtle mb-3 lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">March 08,
-            2020
-        </div>
-
-        <h1 class="text-24 md:text-28 lg:text-32 text-textContrast mb-5">
-            <a href="#">
-                South compare live probably leader life have
-                president <svg class="inline-block h-5 md:h-6 fill-current text-textSubtle" viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M10.604 1h4.14 -.01c.13-.01.25.11.25.24v4.14l-.01-.01c0 .13-.12.25-.25.25 -.07 0-.14-.03-.18-.08l-1.55-1.55 -3.75 3.75 0-.001c-.31.28-.78.26-1.06-.04 -.27-.29-.27-.74-.001-1.03l3.75-3.75 -1.55-1.55 -.01-.01c-.1-.1-.1-.26-.01-.36 .04-.05.11-.08.17-.08ZM3.74 2l-.01 0c-.97 0-1.75.78-1.75 1.75v8.5c0 .96.78 1.75 1.75 1.75h8.5l-.01-.001c.96 0 1.75-.79 1.75-1.75 0-.01 0-.01 0-.01v-3.5 0c0-.42-.34-.75-.75-.75 -.42 0-.75.33-.75.75v3.5 0c0 .13-.12.25-.25.25h-8.5 -.01c-.14-.01-.25-.12-.25-.26v-8.5l0 0c-.01-.14.11-.26.24-.26h3.5l-.01-.001c.41 0 .75-.34.75-.75 0-.42-.34-.75-.75-.75h-3.5Z"/>
-                </svg>
-            </a>
-        </h1>
-
-        <p>Will Schreiber:</p>
-
-        <blockquote>
-            <p>I haven’t installed MSFT Office on a machine since 2009. Sheets and Docs have been good enough for me.
-                The theoretical unlimited computing power and collaboration features meant Google Docs was better than
-                Office (and free!).</p>
-            <p>Then something happened at Google. I’m not sure what. But they stopped innovating on cloud software.</p>
-        </blockquote>
-        <blockquote>
-
-            <p>Docs and Sheets haven’t changed in a decade. Google Drive remains impossible to navigate. Sharing is
-                complicated. Sheets freezes up. I can’t easily interact with a Sheets API (I’ve tried!). Docs still
-                shows page breaks by default! WTF!</p>
-        </blockquote>
-        <div class="flex flex-row w-full justify-between">
-            <ul class="tags flex flex-row">
-                <li class="tag">
-                    <a href="#">life</a>
-                </li>
-
-            </ul>
-            <a class="" href="#">Read more →</a>
-        </div>
+        {% endfor %}
     </div>
 
 </section>
+
+{# Update above with Gap once Flex Gap works in Safari (Mac & iOS) #}
+{# <div class="flex gap-4">
+                <div class="flex-shrink mono">12</div>
+                <div class="flex-1 flex flex-row gap-4">
+                    <div class="flex-shrink w-14">
+                        <img src="https://placeimg.com/200/280/" alt="" srcset="">
+                    </div>
+                    <div class="flex-1 flex flex-col md:flex-row gap-1 md:gap-3 ">
+                        <div class="md:flex-1">
+                            <span class="mr-2 text-textContrast" >I Care a Lot Santa Cruz when you're running Tailwind locally</span>
+                            <span class="inline-block">2021 film</span>
+                        </div>
+                        <div class="md:flex-shrink">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div> #}

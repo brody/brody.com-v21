@@ -30,7 +30,18 @@ module.exports = {
 				secondary: "var(--color-secondary)",
 			},
 			fontFamily: {
-				var: ["Recursive", "sans-serif"],
+				var: [
+					"Recursive",
+					"-apple-system",
+					"BlinkMacSystemFont",
+					"Segoe UI",
+					"Roboto",
+					"Oxygen-Sans",
+					"Ubuntu",
+					"Cantarell",
+					"Helvetica Neue",
+					"sans-serif",
+				],
 			},
 			gridTemplateColumns: {
 				grid: "1fr minmax(0, 8ch) min(65ch, 100%) minmax(0, 8ch) 1fr;",

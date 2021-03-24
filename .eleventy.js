@@ -81,6 +81,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/static");
 	eleventyConfig.addPassthroughCopy("img");
 	eleventyConfig.addPassthroughCopy("src/notes/assets");
+	eleventyConfig.addPassthroughCopy("src/library/assets");
 
 	// Filters
 	Object.keys(filters).forEach((filterName) => {
