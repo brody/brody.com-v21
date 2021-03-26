@@ -102,7 +102,6 @@ img {
 }
 
 .title {
-	@apply leading-tight mt-0 mb-2;
 	--mono: "MONO" 0;
 	--casl: "CASL" 1;
 	--wght: "wght" 728;
@@ -111,7 +110,6 @@ img {
 }
 
 .subtitle {
-	@apply leading-snug text-textSubtle mt-2 mb-4;
 	--mono: "MONO" 0;
 	--casl: "CASL" 1;
 	--wght: "wght" 412;
@@ -305,6 +303,19 @@ hr {
 	@apply border-bgContrast my-8;
 }
 
+progress {
+	@apply rounded-full bg-bgContrast overflow-hidden;
+}
+progress::-webkit-progress-bar {
+	@apply bg-bgContrast rounded-full overflow-hidden;
+}
+progress::-webkit-progress-value {
+	@apply bg-textSubtle;
+}
+progress::-moz-progress-bar {
+	@apply bg-textSubtle;
+}
+
 mark {
 	@apply bg-bgContrast text-primary px-1;
 	border-radius: 0.25em 0.15em 0.5em 0.1em;
@@ -441,6 +452,96 @@ blockquote.large :first-child {
 
 blockquote.large :last-child {
 	@apply mb-4;
+}
+
+/* Rating */
+
+.rating {
+	ul {
+		li {
+			@apply ml-0.5;
+
+			.star-base {
+				@apply text-bgContrast fill-current;
+			}
+		}
+	}
+
+	&.rating-\.5 {
+		li:nth-child(1) path.star-half {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-1 {
+		li:nth-child(1) path.star-base {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-1\.5 {
+		li:nth-child(1) path.star-base {
+			@apply text-text fill-current;
+		}
+
+		li:nth-child(2) path.star-half {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-2 {
+		li:nth-child(-n + 2) path.star-base {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-2\.5 {
+		li:nth-child(-n + 2) path.star-base {
+			@apply text-text fill-current;
+		}
+
+		li:nth-child(3) path.star-half {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-3 {
+		li:nth-child(-n + 3) path.star-base {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-3\.5 {
+		li:nth-child(-n + 3) path.star-base {
+			@apply text-text fill-current;
+		}
+
+		li:nth-child(4) path.star-half {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-4 {
+		li:nth-child(-n + 4) path.star-base {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-4\.5 {
+		li:nth-child(-n + 4) path.star-base {
+			@apply text-text fill-current;
+		}
+
+		li:nth-child(5) path.star-half {
+			@apply text-text fill-current;
+		}
+	}
+
+	&.rating-5 {
+		li:nth-child(-n + 5) path.star-base {
+			@apply text-secondary fill-current;
+		}
+	}
 }
 
 /* purgecss end ignore */

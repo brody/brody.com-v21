@@ -8,11 +8,11 @@ pagination:
 
 <section id="intro" class="mb-20 md:mb-32 lg:mb-40">
 
-    <h1 class="title">G'day, I’m <span class="inline-block gradient">Brody MacLean</span>, a <span
+    <h1 class="title leading-tight mt-0 mb-2">G'day, I’m <span class="inline-block gradient">Brody MacLean</span>, a <span
             class="md:inline-block">multi-disciplinary</span> product designer based in Sydney, Australia.
     </h1>
 
-    <h2 class="subtitle">Currently, I’m designing software for the insurance industry at Mitti.</h2>
+    <h2 class="subtitle leading-snug text-textSubtle mt-2 mb-4">Currently, I’m designing software for the insurance industry at <a class="text-textSubtle" href="https://www.mitti.com.au/" target="_blank">Mitti</a>.</h2>
 
     {# {% include "nowplaying.njk" %} #}
 
@@ -28,7 +28,7 @@ pagination:
             <time data-date="{{ note.date }}" datetime="{{ note.date | htmlDateString }}" class="mono text-12 text-textSubtle mb-2 inline-block lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">{{ note.date | prettyDate }}
             </time>
 
-            <h1 class="title text-24 md:text-28 lg:text-32 text-textContrast mb-5">
+            <h1 class="title leading-tight mt-0 mb-2 text-24 md:text-28 lg:text-32 text-textContrast">
                 <a href="{% if note.data.link %}{{ note.data.link }}{% else %}{{ note.url }}{% endif %}" {% if note.data.link %}target="_blank" rel="noopener"{% endif %}>
                     {{ note.data.title }}
                     {% if note.data.link %}

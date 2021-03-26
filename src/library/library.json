@@ -1,4 +1,4 @@
 {
 	"layout": "post",
-	"permalink": "/library/{% if slug %}{{ slug }}{% else %}{{ page.filePathStem }}{% endif %}/"
+	"permalink": "/{% if slug %}{{ slug }}{% else %}{{ page.filePathStem }}{% endif %}/"
 }
