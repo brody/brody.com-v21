@@ -6,6 +6,6 @@ progress:
 # repeat: true
 artwork: /library/assets/tv-quiz.jpeg
 released: 2020
-type: mini series
+type: tv show
 rating: 5
 ---

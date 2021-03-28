@@ -6,6 +6,6 @@ progress: [5, 8]
 repeat:
 artwork:
 released: 2021
-type: tv series
+type: tv show
 rating:
 ---
