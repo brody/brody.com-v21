@@ -39,7 +39,7 @@ As part of my job at Cloudbees, I have been working on creating our Design Syste
 
 <br/>
 
-![Design with consistency](./assets/cloudbees-design-principles/consistent.gif)
+![Design with consistency](/notes/assets/cloudbees-design-principles/consistent.gif)
 
 ### 1. Design with consistency
 
@@ -50,7 +50,7 @@ We believe that a consistent experience across all Cloudbees products & to pre-e
 
 <br/>
 
-![Design simply](./assets/cloudbees-design-principles/simple.gif)
+![Design simply](/notes/assets/cloudbees-design-principles/simple.gif)
 
 ### 2. Design simply
 
@@ -66,7 +66,7 @@ We believe that <mark>the best answer is often the simplest answer</mark>; that
 
 <br/>
 
-![Design for delight](./assets/cloudbees-design-principles/delight.gif)
+![Design for delight](/notes/assets/cloudbees-design-principles/delight.gif)
 
 ### 3. Design for delight
 
@@ -75,7 +75,7 @@ We believe that designing with surprise & delight in mind will foster allegiance
 > “Emotional design—which uses psychology and craftsman- ship to create an experience for users that makes them feel like there’s a person, not a machine, at the other end of the connection.”  
 > <cite>— Aarron Walter, Author of Designing For Emotion</cite>
 
-![Design iteratively](./assets/cloudbees-design-principles/iterate.gif)
+![Design iteratively](/notes/assets/cloudbees-design-principles/iterate.gif)
 
 ### 4. Design iteratively
 

@@ -18,7 +18,9 @@ I thought I'd jot down the objectives & principles for the 2021 redesign to use 
 
 My aim is to create a space to post videos, quotes, links, images and also longer blog posts, which I never seem to get around to finishing 😬. I'm thinking something like a Tumblog, tagged to filter down by type & topic.
 
-Alongside the posts, I'd like to create a timeline library of the TV shows, movies, courses, books & video games I complete with a basic rating system similarly filterable by type to see just the latest movies I've watched, for example. Currently, I use the Letterboxd API for this exact thing on my about page but with the mixed content, I think it might be cleaner to do that manually for this section. ## Ease to post
+Alongside the posts, I'd like to create a timeline library of the TV shows, movies, courses, books & video games I complete with a basic rating system similarly filterable by type to see just the latest movies I've watched, for example. Currently, I use the Letterboxd API for this exact thing on my about page but with the mixed content, I think it might be cleaner to do that manually for this section.
+
+## Ease to post
 
 The friction of jumping onto my laptop, launching iTerm, changing directory, opening the directory in VS Code, firing up Gridsome, creating a new file, futzing with the front matter, previewing, pushing code to Github — you get the gist. It's a whole effort to post and now that I want to post more short-form content, the current workflow to post is too cumbersome. { #excerpt }
 

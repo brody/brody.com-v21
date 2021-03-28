@@ -20,7 +20,7 @@ I can already hear the jeers from friends, but having abstained for 4 week block
 
 ### Improved Sleep
 
-Even at the best of times, I'm a horrible sleeper, but having [a couple under the belt](http://time.com/3671777/drinking-sleep/) can block REM sleep, interrupt your circadian rhythm & aggravate breathing problems (aka snoring 😴)
+Even at the best of times, I'm a horrible sleeper, but having [a couple under the belt](http://time.com/3671777/drinking-sleep/) can block REM sleep, interrupt your circadian rhythm & aggravate breathing problems (aka snoring 😴).
 
 ### Morning workouts are no longer a struggle
 

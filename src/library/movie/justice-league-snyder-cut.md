@@ -8,5 +8,3 @@ released: 2021
 type: movie
 rating: 5
 ---
-
-This is a little write up about the Snyder Cut

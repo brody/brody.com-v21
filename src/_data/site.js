@@ -2,7 +2,7 @@ module.exports = {
 	title: "Brody MacLean",
 	description:
 		"Brody MacLean is a Lead Product Designer based in Sydney, Australia.",
-	url: "https://brodynext.netlify.app/",
+	url: "https://brody.com/",
 	author: "Brody MacLean",
 	meta_data: {
 		twitter: "@brodymaclean",

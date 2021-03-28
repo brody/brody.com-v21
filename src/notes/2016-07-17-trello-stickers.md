@@ -2,7 +2,7 @@
 title: Trello Stickers
 date: 2016-07-17
 tags:
-  - Side Project
+  - projects
 published: true
 slug: trello-stickers
 featured_image: /notes/assets/trello-stickers/og.png
