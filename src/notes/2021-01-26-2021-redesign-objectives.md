@@ -2,12 +2,13 @@
 title: "2021 Redesign: Objectives"
 date: 2021-01-26
 published: true
-slug: 2021-redesign
+slug: 2021-redesign/objectives
 description: Another year, another redesign of Brody.com to give me the chance to iterate upon the design, improve my front-end skillz and try out a shiny new tool or two.
 og-image:
 tags:
   - design
   - development
+  - redesign
 ---
 
 Another year, another redesign of Brody.com to give me the chance to iterate upon the design, improve my front-end skillz and try out a shiny new tool or two.

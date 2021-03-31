@@ -113,7 +113,7 @@ module.exports = function (eleventyConfig) {
 		markdownIt({
 			html: true,
 			breaks: true,
-			linkify: true,
+			// linkify: true,
 		})
 			.use(require("markdown-it-prism"))
 			.use(require("markdown-it-attrs"))
@@ -122,7 +122,7 @@ module.exports = function (eleventyConfig) {
 		return markdownIt({
 			html: true,
 			breaks: true,
-			linkify: true,
+			// linkify: true,
 		})
 			.use(require("markdown-it-prism"))
 			.use(require("markdown-it-attrs"))

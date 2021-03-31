@@ -86,7 +86,8 @@ footer a:hover {
 }
 
 p,
-pre {
+pre,
+table {
 	@apply my-4;
 }
 
@@ -434,7 +435,7 @@ blockquote {
 }
 
 blockquote.large {
-	@apply -mx-5 my-5 border-l-2 border-secondary bg-bgOffset px-5 py-1;
+	@apply -mx-5 my-5 border-l-2 border-secondary bg-bgOffset px-5 py-0.5;
 }
 
 @screen md {
@@ -442,17 +443,17 @@ blockquote.large {
 		@apply ml-0 pl-6;
 	}
 	blockquote.large {
-		@apply border-l-4 -mx-8 px-8 py-2 text-18;
+		@apply border-l-4 -mx-8 px-8 text-18;
 	}
 }
 
-blockquote.large :first-child {
+/* blockquote.large :first-child {
 	@apply mt-4;
 }
 
 blockquote.large :last-child {
 	@apply mb-4;
-}
+} */
 
 /* Rating */
 
@@ -541,6 +542,17 @@ blockquote.large :last-child {
 		li:nth-child(-n + 5) path.star-base {
 			@apply text-secondary fill-current;
 		}
+	}
+}
+
+table {
+	@apply -mx-2;
+	th,
+	td {
+		@apply py-0.5 px-2 text-left;
+	}
+	th {
+		@apply text-textContrast;
 	}
 }
 
