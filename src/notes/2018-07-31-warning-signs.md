@@ -5,7 +5,7 @@ published: true
 slug: warning-signs
 description: You can tell a lot about your initial experience with a company.
 tags:
-  - Culture
+  - culture
 ---
 
 <blockquote class="twitter-tweet center" data-lang="en"><p lang="en" dir="ltr">Something I wish I’d learned earlier in my career: The way companies run their recruiting process is a strong indicator for what it’s like to work there.</p>&mdash; Cap Watkins (@cap) <a href="https://twitter.com/cap/status/1024016820280479744?ref_src=twsrc%5Etfw">July 30, 2018</a></blockquote>

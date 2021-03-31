@@ -5,30 +5,9 @@ description: Personal notes and snippets of code.
 
 pagination:
   data: collections.notes
-  size: 20
-  reverse: true 
+  size: 100
+  reverse: true
 ---
-
-{# <main class="">
-    <div class="container">
-        <h1 class="title">{{ title }}</h1>
-        <h2 class="subtitle">Personal notes and snippets of code.</h2>
-
-        <ul>
-            {% set items = pagination.items %}
-
-            {% for note in items %}
-                <li class="mb-3 lg:mb-0">
-                    <div class=" py-1 lg:flex items-center justify-between no-underline">
-                        <a class="text-textContrast" href="{{ note.url }}">{{ note.data.title }}</a>
-                        <time data-date="{{ note.date }}" datetime="{{ note.date | htmlDateString }}" class="post-date block text-textSubtle text-14 mt-1 lg:mt-0">{{ note.date | prettyDate }}</time>
-                    </div>
-                    {{ note.content }}
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</main> #}
 
 <section id="intro" class="mb-20 md:mb-32 lg:mb-40">
 

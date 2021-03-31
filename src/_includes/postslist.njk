@@ -1,19 +1,52 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-    {% for post in postslist | reverse %}
-        <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-            <a href="{{ post.url | url }}" class="postlist-link">
-                {% if post.data.title %}{{ post.data.title }}
-                {% else %}
-                    <code>{{ post.url }}</code>
+{% for note in postslist | reverse %}
+
+    <div id="note-{{ loop.index }}" class="pt-20 -mt-20 md:pt-32 md:-mt-32 lg:pt-40 lg:-mt-40 note relative mb-20 md:mb-32 lg:mb-40">
+        <time data-date="{{ note.date }}" datetime="{{ note.date | htmlDateString }}" class="mono text-12 text-textSubtle mb-2 inline-block lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">{{ note.date | prettyDate }}
+        </time>
+
+        <h1 class="title leading-tight mt-0 mb-2 text-24 md:text-28 lg:text-32 text-textContrast">
+            <a href="{% if note.data.link %}{{ note.data.link }}{% else %}{{ note.url }}{% endif %}" {% if note.data.link %}target="_blank" rel="noopener"{% endif %}>
+                {{ note.data.title }}
+                {% if note.data.link %}
+                    <svg class="inline-block h-5 md:h-6 fill-current text-textSubtle" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                        d="M10.604 1h4.14 -.01c.13-.01.25.11.25.24v4.14l-.01-.01c0 .13-.12.25-.25.25 -.07 0-.14-.03-.18-.08l-1.55-1.55 -3.75 3.75 0-.001c-.31.28-.78.26-1.06-.04 -.27-.29-.27-.74-.001-1.03l3.75-3.75 -1.55-1.55 -.01-.01c-.1-.1-.1-.26-.01-.36 .04-.05.11-.08.17-.08ZM3.74 2l-.01 0c-.97 0-1.75.78-1.75 1.75v8.5c0 .96.78 1.75 1.75 1.75h8.5l-.01-.001c.96 0 1.75-.79 1.75-1.75 0-.01 0-.01 0-.01v-3.5 0c0-.42-.34-.75-.75-.75 -.42 0-.75.33-.75.75v3.5 0c0 .13-.12.25-.25.25h-8.5 -.01c-.14-.01-.25-.12-.25-.26v-8.5l0 0c-.01-.14.11-.26.24-.26h3.5l-.01-.001c.41 0 .75-.34.75-.75 0-.42-.34-.75-.75-.75h-3.5Z"/>
+                    </svg>
                 {% endif %}
             </a>
-            <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | prettyDate }}</time>
-            {% for tag in post.data.tags %}
-                {%- if collections.tagList.indexOf(tag) != -1 -%}
-                    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                    <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-                {%- endif -%}
-            {% endfor %}
-        </li>
-    {% endfor %}
-</ol>
+        </h1>
+        {% if note.data.featured_image %}
+            <figure class="mt-6 mb-5">
+                <img src="{{ note.data.featured_image }}" alt="{% if note.data.figcaption %}{{ note.data.title }}{% else %}{{ note.data.title }}{% endif %}">
+                {% if note.data.figcaption %}
+                    <figcaption>
+                        {{ note.data.figcaption }}
+                    </figcaption>
+                {% endif %}
+            </figure>
+        {% endif %}
+        <article class="relative">
+            {% if note.data.page.excerpt %}
+                {{ note.data.page.excerpt | md | safe }}
+                <div class="w-full h-24 absolute bottom-0 left-0 right-0 flex flex-col justify-end items-center bg-gradient-to-t from-bg to-transparent">
+                    <a class="bg-bgContrast border hover:border-bgContrast hover:bg-bgOffset py-2 px-5 rounded-full" href="{{ note.url }}#excerpt">Continue reading →</a>
+                </div>
+            {% else %}
+                {{ note.templateContent | safe }}
+            {% endif %}
+        </article>
+        <div class="flex flex-row w-full justify-between">
+            <ul class="tags list-none flex flex-row">
+                {% for tag in note.data.tags %}
+                    <li class="tag">
+                        <a href="/tags/{{ tag | slug }}">{{ tag }}</a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+            {# {% if note.data.page.excerpt %}
+                    <a class="" href="{{ note.url }}">Continue reading →</a>
+                {% endif %} #}
+        </div>
+    </div>
+{% endfor %}

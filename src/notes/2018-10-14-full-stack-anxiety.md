@@ -6,8 +6,8 @@ slug: full-stack-anxiety
 description: I’m a designer, so I should probably learn responsive patterns, methods for remote user testing, Sketch, motion graphics, Framer, keep up to date with current design trends, and a million other things.
 og-image: ./images/full-stack-anxiety/og.gif
 tags:
-  - Design
-  - Career
+  - design
+  - career
 
 source-title:
 source-url:

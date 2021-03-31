@@ -413,7 +413,8 @@ article {
 	@apply text-primary border-b border-textSubtle;
 }
 
-.tag a::before {
+.tag a::before,
+#tag-hash {
 	@apply text-textSubtle;
 	margin-right: 2px;
 	content: "#";

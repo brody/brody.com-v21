@@ -4,7 +4,7 @@ date: 2017-05-09 10:21:03
 published: true
 slug: cloudbees-design-principles
 tags:
-  - Design
+  - design
 og-image: /notes/assets/cloudbees-design-principles/cover.jpg
 description: Our design principles define the design direction going forward and helps convey our core beliefs to stakeholders.
 ---

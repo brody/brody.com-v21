@@ -1,7 +1,7 @@
 ---
 pagination:
   data: collections
-  size: 1
+  size: 100
   alias: tag
   filter:
     - all
@@ -9,15 +9,28 @@ pagination:
     - notes
     - posts
     - tagList
-  addAllPagesToCollections: true
 layout: base.njk
 eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag }}/
 ---
-<h1>Tagged “{{ tag }}”</h1>
 
-{% set postslist = collections[tag] %}
-{% include "postslist.njk" %}
+<section id="intro" class="mb-20 md:mb-32 lg:mb-40">
 
-<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
+  <h1 class="title leading-tight mt-0 mb-2">
+    <span id="tag-hash">#</span>{{ tag }}</h1>
+
+</section>
+
+<section id="main">
+
+  {% set postslist = collections[tag] %}
+  {% include "postslist.njk" %}
+
+</section>
+
+<div class="w-full flex justify-center items-center mb-16 md:mb-24 lg:mb-32">
+  <a class="bg-bgContrast border hover:border-bgContrast hover:bg-bgOffset text-18 py-2 px-6 rounded-full" href="{{ '/tags/' | url }}">All tags → </a>
+</div>
+
+{# <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p> #}

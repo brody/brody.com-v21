@@ -7,8 +7,8 @@ description: Heading to a meeting, I've started running short games to help brea
 featured_image: /notes/assets/meeting-warm-up/cover.png
 og-image: /notes/assets/meeting-warm-up/og.png
 tags:
-  - Design
-  - Culture
+  - design
+  - culture
 ---
 
 Recently, I've been running a game of Pictionary, before our designer catch-up meetings, to break the ice and get the creative juices flowing.

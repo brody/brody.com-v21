@@ -6,7 +6,7 @@ slug: procrastination-all-in-the-mind
 description: To procrastinate or not, the answer may be down to differences in how our brains are wired, a study suggests.
 featured_image:
 tags:
-  - Productivity
+  - productivity
 
 source-title: Procrastination&#58; It's pretty much all in the mind
 source-url: https://www.bbc.com/news/health-45295392/

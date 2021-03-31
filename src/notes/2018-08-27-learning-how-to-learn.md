@@ -7,7 +7,7 @@ description: Powerful mental tools to help you master tough subjects.
 og-image: /notes/assets/learning-how-to-learn/og.png
 
 tags:
-  - Course
+  - course
 
 source-title: Learning How to Learn&#58; Powerful mental tools to help you master tough subjects
 source-url: https://www.coursera.org/learn/learning-how-to-learn/

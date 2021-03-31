@@ -3,8 +3,8 @@ title: Reinventing Organizations
 date: 2016-11-15
 published: true
 tags:
-  - Book
-  - Culture
+  - book
+  - culture
 slug: reinventing-organizations
 featured_image: /notes/assets/reinventing-organizations/cover.jpg
 og-image: /notes/assets/reinventing-organizations/cover.jpg
