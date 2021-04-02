@@ -7,5 +7,5 @@ progress:
 # artwork: /library/assets/xxx.jpeg
 released: 2016
 type: movie
-rating: 2.5
+rating: 2
 ---
