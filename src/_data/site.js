@@ -1,7 +1,6 @@
 module.exports = {
 	title: "Brody MacLean",
-	description:
-		"Brody MacLean is a Lead Product Designer based in Sydney, Australia.",
+	description: "A Lead Product Designer based in Sydney, Australia.",
 	url: "https://brody.com",
 	author: "Brody MacLean",
 	meta_data: {
