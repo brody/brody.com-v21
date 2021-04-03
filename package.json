@@ -1,6 +1,6 @@
 {
-	"name": "Brody.com",
-	"description": "Brody MacLean",
+	"name": "Brody MacLean",
+	"description": "A multi-disciplinary product designer based in Sydney, Australia.",
 	"scripts": {
 		"clean": "del dist",
 		"dev:postcss": "postcss src/_assets/stylesheets/*.css -o src/static/app.compiled.css --watch --verbose",

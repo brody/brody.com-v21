@@ -1,23 +1,8 @@
-<!--
-  Maintained with the excellent knowledge from https://htmlhead.dev
-  These comments will be removed in production
-
-  ========================
-
-  The following 2 meta tags *must* come first in the <head>
-  to consistently ensure proper document rendering.
-  Any other head element should come *after* these tags.
--->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Set the base URL for all relative URLs within the document -->
 <base href="{{ page.url }}">
 
-<!-- 
-  Short description of the document (limit to 150 characters)
-  This content *may* be used as a part of search engine results. 
--->
 <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
 
 <!-- Control the behavior of search engine crawling and indexing -->
@@ -56,7 +41,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
 {% if site.meta_data.default_social_image or featured_image %}
-  <meta property="og:image" content="{% if env == 'production' %}{{ site.url }}{% endif %}{% if featured_image  %}{{ featured_image }}{% else %}{{ site.meta_data.default_social_image }}{% endif %}"/>
+  <meta property="og:image" content="{% if env == 'production' %}{{ site.url }}{% endif %}{% if og_image  %}{{ og_image }}{% elif featured_image  %}{{ featured_image }}{% else %}{{ site.meta_data.default_social_image }}{% endif %}"/>
 {% endif %}
 <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"/>
 <meta property="og:site_name" content="{{ site.title }}">
