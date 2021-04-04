@@ -1,11 +1,11 @@
 ---
-date: 2222-22-22
+date: 2021-04-04
 title: "Crime Scene: The Vanishing at the Cecil Hotel"
 subtitle:
-progress: [3, 4]
+progress:
 # repeat: true
 # artwork: /library/assets/xxx.jpeg
 released: 2021
 type: tv show
-rating:
+rating: 4
 ---
