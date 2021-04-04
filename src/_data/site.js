@@ -7,5 +7,5 @@ module.exports = {
 		twitter: "@brodymaclean",
 		default_social_image: "/static/og.png",
 	},
-	env: process.env.ELEVENTY_ENV === "production",
+	isProduction: process.env.ELEVENTY_ENV === "production",
 };
