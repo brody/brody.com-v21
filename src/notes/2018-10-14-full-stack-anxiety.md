@@ -8,17 +8,6 @@ social_image: ./images/full-stack-anxiety/og.gif
 tags:
   - design
   - career
-
-source-title:
-source-url:
-source-url-label:
-
-book-title:
-book-author:
-book-url:
-book-url-label:
-book-cover:
-book-rating:
 ---
 
 I stumbled across this talk & it spoke to me and the conflicting priorities rolling round in my head.
