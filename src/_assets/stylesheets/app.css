@@ -2,14 +2,13 @@
 @import "utils/_accessibility.css";
 
 /* purgecss start ignore */
-@import "utils/_syntax.css";
 
 @font-face {
 	font-family: "Recursive";
+	src: url("/static/fonts/Recursive_VF_1.078--subset-GF_latin_basic.woff2");
 	font-weight: 300 1000;
 	font-style: oblique 0deg 14deg;
 	font-display: swap;
-	src: url("/static/fonts/Recursive_VF_1.078--subset-GF_latin_basic.woff2");
 	/* src: url("/static/fonts/Recursive_VF_1.074.woff2") format("woff2-variations"); */
 }
 
@@ -555,5 +554,7 @@ table {
 		@apply text-textContrast;
 	}
 }
+
+@import "utils/_syntax.css";
 
 /* purgecss end ignore */
