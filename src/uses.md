@@ -1,11 +1,14 @@
 ---
 title: Uses
 date: 2021-04-05
-layout: post.njk
+layout: page.njk
+---
+
+<p class="text-textSubtle">Last updated {{ page.date | prettyDate }}</p>
+
 ---
 
 A list of hardware, software and on-the-go setup I use daily.
-Last updated 2021-04-05.
 
 ## Workstation
 
