@@ -2,24 +2,6 @@
 layout: base.njk
 ---
 
-{# <article> #}
-{# <div class="my-20 text-center">
-    <h1 class="font-bold text-3xl mb-4">{{ title }}</h1>
-    <time data-date="{{ page.date }}" datetime="{{ page.date | htmlDateString }}" class="post-date text-textSubtle">{{ page.date | prettyDate }}</time>
-  </div> #}
-
-{# {% if featured_image %}
-    <figure class="my-5">
-      {% Image "{{ featured_image | url }}",
-      "{{ featured_caption }}" %}
-      <figcaption class="text-sm px-6 md:text-center">{{ featured_caption }}</figcaption>
-    </figure>
-  {% endif %} #}
-
-{# <div class="text-text my-20">
-    {{ content | safe }}
-  </div> #}
-
 <section id="main" class="lg:relative mb-20 md:mb-32 lg:mb-40">
 
   <time data-date="{{ page.date }}" datetime="{{ page.date | htmlDateString }}" class="mono text-12 text-textSubtle mb-3 inline-block lg:absolute lg:w-40 lg:mt-3 lg:-ml-48 lg:text-right">{{ page.date | prettyDate }}
@@ -66,4 +48,3 @@ layout: base.njk
 
   </div>
 </section>
-{# </article> #}
