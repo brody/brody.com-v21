@@ -50,7 +50,6 @@ A list of hardware, software and on-the-go setup I use daily.
 - IconJar
 - RightFont
 - Pixelmator Pro
-- ImageOptim
 
 ## Development
 
@@ -60,11 +59,12 @@ A list of hardware, software and on-the-go setup I use daily.
 - [iTerm2](https://iterm2.com/){.text-text}
   <span class="text-textSubtle text-14">Theme:</span> [Night Owl](https://github.com/nickcernis/iterm2-night-owl){.text-text}
   <span class="text-textSubtle text-14">Font:</span> [MonoLisa](https://www.monolisa.dev/){.text-text}
-- Google Chrome / Firefox
+- Firefox
 - Github
 - Netlify
-- ResponsivelyApp
+- ImageOptim
 - Dash
+- ResponsivelyApp
 - Working Copy
 
 ## Communication
