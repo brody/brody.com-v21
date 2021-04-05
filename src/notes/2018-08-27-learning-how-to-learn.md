@@ -4,7 +4,7 @@ date: 2018-08-27 01:51:03
 published: true
 slug: learning-how-to-learn
 description: Powerful mental tools to help you master tough subjects.
-og_image: /notes/assets/learning-how-to-learn/og.png
+social_image: /notes/assets/learning-how-to-learn/og.png
 
 tags:
   - course

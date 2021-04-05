@@ -6,7 +6,7 @@ tags:
 published: true
 slug: trello-stickers
 featured_image: /notes/assets/trello-stickers/og.png
-og_image: /notes/assets/trello-stickers/og.png
+social_image: /notes/assets/trello-stickers/og.png
 description: Jazz up your Trello board with these Sticker Sets
 ---
 

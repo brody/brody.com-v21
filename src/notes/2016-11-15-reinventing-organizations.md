@@ -7,7 +7,7 @@ tags:
   - culture
 slug: reinventing-organizations
 featured_image: /notes/assets/reinventing-organizations/cover.jpg
-og_image: /notes/assets/reinventing-organizations/cover.jpg
+social_image: /notes/assets/reinventing-organizations/cover.jpg
 description: The book that has inspired organizations to take a radical leap and adopt a whole different set of management principles and practices.
 
 source-title:

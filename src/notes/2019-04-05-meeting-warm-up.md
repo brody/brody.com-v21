@@ -5,7 +5,7 @@ published: true
 slug: meeting-warm-up
 description: Heading to a meeting, I've started running short games to help break the ice and get the creative juices flowing.
 featured_image: /notes/assets/meeting-warm-up/cover.png
-og_image: /notes/assets/meeting-warm-up/og.png
+social_image: /notes/assets/meeting-warm-up/og.png
 tags:
   - design
   - culture
