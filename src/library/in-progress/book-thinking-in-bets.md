@@ -1,11 +1,11 @@
 ---
-date: 2222-22-22
+date: 2021-04-08
 title: Thinking in Bets
 subtitle: Annie Duke
-progress: [311, 411]
+progress:
 repeat:
 artwork: /library/assets/book-thinking-in-bets.jpeg
 released: 2018
 type: book
-rating:
+rating: 4
 ---

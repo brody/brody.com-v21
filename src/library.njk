@@ -78,7 +78,7 @@ pagination:
                 {% endif %}
 
                 <div class="flex-1 flex flex-row">
-                    {% if (entry.data.artwork) and (entry.data.rating == 5 or entry.data.progress) %}
+                    {% if (entry.data.artwork) and (entry.data.rating == 5 or entry.data.progress or entry.data.type == "book") %}
                         <div class="flex-shrink w-14 mr-4">
                             <img src="{{ entry.data.artwork }}" class="rounded-sm" alt="{{ entry.data.title }}" srcset="">
                         </div>
