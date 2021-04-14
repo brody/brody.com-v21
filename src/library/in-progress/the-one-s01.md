@@ -1,11 +1,11 @@
 ---
-date: 2222-22-22
+date: 2021-04-13
 title: The One
 subtitle: Season 1
-progress: [7, 8]
+progress:
 repeat:
 artwork:
 released: 2021
 type: tv show
-rating:
+rating: 3.5
 ---
