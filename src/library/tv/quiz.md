@@ -4,7 +4,7 @@ title: Quiz
 subtitle:
 progress:
 # repeat: true
-artwork: /library/assets/tv-quiz.jpeg
+artwork: tv-quiz.jpeg
 released: 2020
 type: tv show
 rating: 5

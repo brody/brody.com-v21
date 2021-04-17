@@ -4,7 +4,7 @@ title: "Ignore Everybody by Hugh MacLeod: and 39 Other Keys to Creativity"
 subtitle: Hugh MacLeod
 progress:
 # repeat: true
-# artwork: /library/assets/xxx.jpeg
+# artwork: xxx.jpeg
 released: 2009
 type: book
 rating: 3

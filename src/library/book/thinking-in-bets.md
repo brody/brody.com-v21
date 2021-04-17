@@ -4,7 +4,7 @@ title: Thinking in Bets
 subtitle: Annie Duke
 progress:
 repeat:
-artwork: /library/assets/book-thinking-in-bets.jpeg
+artwork: book-thinking-in-bets.jpeg
 released: 2018
 type: book
 rating: 4

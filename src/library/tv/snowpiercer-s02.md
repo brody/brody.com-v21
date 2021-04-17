@@ -4,7 +4,7 @@ title: Snowpiercer
 subtitle: Season 2
 progress: [4, 10]
 # repeat: true
-# artwork: /library/assets/xxx.jpeg
+# artwork: xxx.jpeg
 released: 2021
 type: tv show
 rating:

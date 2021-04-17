@@ -4,7 +4,7 @@ title: Wandavision
 subtitle: Season 1
 progress:
 # repeat: true
-# artwork: /library/assets/xxx.jpg
+# artwork: xxx.jpg
 released: 2021
 type: tv show
 rating: 4

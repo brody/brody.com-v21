@@ -4,7 +4,7 @@ title: Anything You Want
 subtitle: Derek Sivers
 progress:
 # repeat: true
-artwork: /library/assets/book-anything-you-want.jpeg
+artwork: book-anything-you-want.jpeg
 released: 2011
 type: book
 rating: 5

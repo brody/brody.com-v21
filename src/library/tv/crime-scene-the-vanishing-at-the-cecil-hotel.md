@@ -4,7 +4,7 @@ title: "Crime Scene: The Vanishing at the Cecil Hotel"
 subtitle:
 progress:
 # repeat: true
-# artwork: /library/assets/xxx.jpeg
+# artwork: xxx.jpeg
 released: 2021
 type: tv show
 rating: 4

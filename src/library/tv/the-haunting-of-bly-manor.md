@@ -4,7 +4,7 @@ title: The Haunting of Bly Manor
 subtitle:
 progress:
 # repeat: true
-# artwork: /library/assets/xxx.jpeg
+# artwork: xxx.jpeg
 released: 2020
 type: tv show
 rating: 4

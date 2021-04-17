@@ -4,7 +4,7 @@ title: Love and Monsters
 subtitle:
 progress:
 # repeat: true
-# artwork: /library/assets/book-the-guest-list.jpg
+# artwork: book-the-guest-list.jpg
 released: 2020
 type: movie
 rating: 3.5

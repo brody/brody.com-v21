@@ -4,7 +4,7 @@ title: Greenland
 subtitle:
 progress:
 # repeat: true
-# artwork: /library/assets/xxx.jpeg
+# artwork: xxx.jpeg
 released: 2020
 type: movie
 rating: 4

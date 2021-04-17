@@ -4,7 +4,7 @@ title: Safer at Home
 subtitle:
 progress:
 # repeat: true
-# artwork: /library/assets/xxx.jpg
+# artwork: xxx.jpg
 released: 2021
 type: movie
 rating: 3
