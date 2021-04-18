@@ -338,8 +338,14 @@ p mark {
 	@apply aspect-w-16 aspect-h-9;
 }
 
-.bg-blur {
-	backdrop-filter: blur(12px);
+@supports (
+	(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
+) {
+	.bg-blur {
+		@apply bg-bgContrast80;
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
 }
 
 .mono {
@@ -356,28 +362,26 @@ p mark {
 
 .gradient {
 	background-color: var(--color-gradient-3);
-	background-image: linear-gradient(
-		45deg,
+	background: linear-gradient(
+		70deg,
 		var(--color-gradient-1),
 		var(--color-gradient-2),
 		var(--color-gradient-3),
 		var(--color-gradient-4),
 		var(--color-gradient-5)
 	);
-	background-size: 300% 200%;
-	animation: gradient 4s linear infinite !important;
+	background-size: 400% 400%;
+	-webkit-animation: gradient 4s ease infinite;
+	-moz-animation: gradient 4s ease infinite;
+	animation: gradient 4s ease infinite;
 
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-text-fill-color: transparent;
-	/* -webkit-transition: color 0.2s ease-out;
-	-moz-transition: color 0.2s ease-out;
-	-o-transition: color 0.2s ease-out;
-	transition: color 0.2s ease-out; */
 }
 
-@keyframes gradient {
+/* @keyframes gradient {
 	0% {
 		background-position: 0% 0%;
 	}
@@ -386,6 +390,39 @@ p mark {
 	}
 	100% {
 		background-position: 0% 0%;
+	}
+} */
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 44%;
+	}
+	50% {
+		background-position: 100% 57%;
+	}
+	100% {
+		background-position: 0% 44%;
+	}
+}
+@-moz-keyframes gradient {
+	0% {
+		background-position: 0% 44%;
+	}
+	50% {
+		background-position: 100% 57%;
+	}
+	100% {
+		background-position: 0% 44%;
+	}
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 44%;
+	}
+	50% {
+		background-position: 100% 57%;
+	}
+	100% {
+		background-position: 0% 44%;
 	}
 }
 
