@@ -25,7 +25,11 @@
 	--color-primary: #3bf0e4;
 	--color-primary-offset: #1cbdb2;
 	--color-secondary: #ffe57f;
-	--color-gradient: 94deg, #3bf0e4, #bca1f7, #ff7170, #f49267, #ffe532;
+	--color-gradient-1: #3bf0e4;
+	--color-gradient-2: #bca1f7;
+	--color-gradient-3: #ff7170;
+	--color-gradient-4: #f49267;
+	--color-gradient-5: #ffe532;
 	--mono: "MONO" 0; /* Monospace: Sans (natural-width) or Mono (fixed-width) */
 	--casl: "CASL" 0; /* Casual: Linear to Casual */
 	--wght: "wght" 382; /* Weight: Light to ExtraBlack; usually set with `font-weight` */
@@ -351,15 +355,38 @@ p mark {
 }
 
 .gradient {
-	background: linear-gradient(var(--color-gradient));
-	background-size: 200% 200%;
-	animation: gradient 2s ease infinite !important;
+	background-color: var(--color-gradient-3);
+	background-image: linear-gradient(
+		45deg,
+		var(--color-gradient-1),
+		var(--color-gradient-2),
+		var(--color-gradient-3),
+		var(--color-gradient-4),
+		var(--color-gradient-5)
+	);
+	background-size: 300% 200%;
+	animation: gradient 4s linear infinite !important;
+
 	-webkit-background-clip: text;
+	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	-webkit-transition: color 0.2s ease-out;
+	-moz-text-fill-color: transparent;
+	/* -webkit-transition: color 0.2s ease-out;
 	-moz-transition: color 0.2s ease-out;
 	-o-transition: color 0.2s ease-out;
-	transition: color 0.2s ease-out;
+	transition: color 0.2s ease-out; */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
 }
 
 article {
@@ -380,20 +407,6 @@ article {
 		::marker {
 			@apply text-textSubtle;
 		}
-	}
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
 	}
 }
 
