@@ -21,7 +21,7 @@
 	--color-bg: #040d21;
 	--color-bg-offset: #0c162d;
 	--color-bg-contrast: #1a263d;
-	--color-bg-contrast-80: rgba(26, 38, 61, 0.8);
+	--color-bg-contrast-85: rgba(26, 38, 61, 0.85);
 	--color-primary: #3bf0e4;
 	--color-primary-offset: #1cbdb2;
 	--color-secondary: #ffe57f;
@@ -339,12 +339,12 @@ p mark {
 }
 
 @supports (
-	(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
+	(-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))
 ) {
 	.bg-blur {
-		@apply bg-bgContrast80;
-		-webkit-backdrop-filter: blur(10px);
-		backdrop-filter: blur(10px);
+		@apply bg-bgContrast85;
+		-webkit-backdrop-filter: blur(12px);
+		backdrop-filter: blur(12px);
 	}
 }
 

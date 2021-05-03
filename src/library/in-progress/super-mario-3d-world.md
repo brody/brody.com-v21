@@ -1,11 +1,11 @@
 ---
 date: 2222-22-22
-title: Ori and the Blind Forest
+title: Super Mario 3D World
 subtitle:
-progress: true
+progress: [7, 12]
 # repeat: true
 artwork:
-released: 2020
+released: 2021
 type: game
 rating:
 ---
