@@ -1,10 +1,10 @@
 ---
-date: 2222-22-22
+date: 2021-05-14
 title: "Spider-Man: Miles Morales"
 subtitle:
-progress: [40, 100]
+progress:
 # repeat: true
-# artwork: /library/assets/xxx.jpeg
+artwork: game-spider-man-miles-morales.png
 released: 2021
 type:
   # - book
@@ -12,5 +12,5 @@ type:
   - game
   # - movie
   # - tv show
-rating:
+rating: 5
 ---
