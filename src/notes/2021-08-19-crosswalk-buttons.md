@@ -7,7 +7,7 @@ description: Next time you impatiently press a pedestrian crossing button again 
 social_image: /notes/assets/crosswalk-buttons/button.jpg
 link: https://youtu.be/FwbNFRbqwfg
 tags:
-  - user experience
+  - ux
   - accessibility
 ---
 
